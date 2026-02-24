@@ -1,0 +1,14 @@
+# default stack
+
+services:
+  django:
+    volumes:
+      - ./oapif_demo:/usr/src/oapif_demo
+      - ./.env:/usr/src/.env
+    ports:
+      - ${HOST_DJANGO_PORT:?}:8000
+    command: python3 manage.py runserver 0.0.0.0:8000
+
+  postgres:
+    ports:
+      - ${HOST_POSTGRES_PORT:?}:5432

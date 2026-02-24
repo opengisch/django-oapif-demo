@@ -1,0 +1,8 @@
+<!DOCTYPE qgis_authentication>
+<qgis_authentication>
+  <configurations>
+    <AuthMethodConfig version="2" uri="" name="django-oapif-demo" id="beesapi" method="Basic">
+      <Config password="123" realm="" username="admin"/>
+    </AuthMethodConfig>
+  </configurations>
+</qgis_authentication>

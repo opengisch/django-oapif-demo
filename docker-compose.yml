@@ -1,0 +1,63 @@
+services:
+  caddy:
+    image: lucaslorentz/caddy-docker-proxy:ci-alpine
+    ports:
+      - ${CADDY_HTTP_PORT:?}:80
+      - ${CADDY_HTTPS_PORT:?}:443
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - caddy_data:/data
+    restart: unless-stopped
+
+  django:
+    image: opengisch/django-oapif-demo:latest
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      cache_from:
+        - opengisch/django-oapif-demo:latest
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - static_volume:/static_volume
+      - media_volume:/media_volume
+    environment:
+      DJANGO_DEBUG: ${DJANGO_DEBUG:?}
+      DJANGO_SUPERUSER_USERNAME: ${DJANGO_SUPERUSER_USERNAME:?}
+      DJANGO_SUPERUSER_PASSWORD: ${DJANGO_SUPERUSER_PASSWORD:?}
+      DJANGO_SUPERUSER_EMAIL: ${DJANGO_SUPERUSER_EMAIL:?}
+      DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY:?}
+      DJANGO_STATIC_ROOT: /static_volume
+      DJANGO_MEDIA_ROOT: /media_volume
+      POSTGRES_USER: ${POSTGRES_USER:?}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?}
+      POSTGRES_DB: ${POSTGRES_DB:?}
+      POSTGRES_HOST: ${POSTGRES_HOST:?}
+      POSTGRES_PORT: ${POSTGRES_PORT:?}
+      POSTGRES_SSLMODE: ${POSTGRES_SSLMODE:?}
+    labels:
+      caddy: ${CADDY_DOMAIN:?}
+      caddy.reverse_proxy: "{{upstreams 8000}}"
+    command: python3 manage.py runserver 0.0.0.0:8000
+
+  postgres:
+    image: postgis/postgis:17-3.5
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:?}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?}
+      POSTGRES_DB: ${POSTGRES_DB:?}
+    healthcheck:
+      test: psql -U ${POSTGRES_USER} -d ${POSTGRES_DB} -c 'SELECT ST_MakePoint(0,0)'
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  caddy_data:
+  static_volume:
+  media_volume:
+  postgres_data:

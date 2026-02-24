@@ -1,0 +1,1328 @@
+[
+{
+  "model": "oapif_demo.apiary",
+  "pk": "009f64b2-d6e4-46b0-aba8-39946379e053",
+  "fields": {
+    "nbr_of_boxes": 5,
+    "bee_species": "Apis Mellifera Carnica",
+    "bee_amount": "100000",
+    "beekeeper": "Galileo Galilei",
+    "picture": "DCIM/1.jpg",
+    "disease": 1,
+    "kind_of_disease": null,
+    "average_harvest": 50,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.259828224481105 46.80794887580833)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "014be504-b170-44ef-96d6-333e874bd30e",
+  "fields": {
+    "nbr_of_boxes": 3,
+    "bee_species": "Apis Mellifera Carnica",
+    "bee_amount": "1000",
+    "beekeeper": "Marie Curie",
+    "picture": "DCIM/3.jpg",
+    "disease": 0,
+    "kind_of_disease": null,
+    "average_harvest": 666,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.258840199181321 46.8105019897628)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "0235be9c-2026-42ac-a99c-f9e8183fc602",
+  "fields": {
+    "nbr_of_boxes": 10,
+    "bee_species": "Apis Mellifera",
+    "bee_amount": "1000",
+    "beekeeper": "Al Idrisi",
+    "picture": "DCIM/3.jpg",
+    "disease": 1,
+    "kind_of_disease": "EFB",
+    "average_harvest": 6,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.253934224924155 46.8063278890749)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "07453566-026b-4516-a449-a864fe768f8b",
+  "fields": {
+    "nbr_of_boxes": 6,
+    "bee_species": "Apis Mellifera Carnica",
+    "bee_amount": "10000",
+    "beekeeper": "Samantha Cristoforetti",
+    "picture": "DCIM/4.jpg",
+    "disease": 0,
+    "kind_of_disease": null,
+    "average_harvest": 200,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.25309827326984 46.80839628624533)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "1511c328-29db-43d0-be29-e49be6ddb1dd",
+  "fields": {
+    "nbr_of_boxes": 5,
+    "bee_species": "Apis Mellifera Mellifera",
+    "bee_amount": "100000",
+    "beekeeper": "Albert Einstein",
+    "picture": "DCIM/2.jpg",
+    "disease": 0,
+    "kind_of_disease": null,
+    "average_harvest": 100,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.253685242042703 46.808640672521015)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "1cf4d15b-8d26-4d57-b167-c410513001be",
+  "fields": {
+    "nbr_of_boxes": 3,
+    "bee_species": "Apis Mellifera",
+    "bee_amount": "1000",
+    "beekeeper": "Nicolau Copernicus",
+    "picture": "DCIM/3.jpg",
+    "disease": 1,
+    "kind_of_disease": "AFB",
+    "average_harvest": null,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.256871936242781 46.810437433864664)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "1dc77378-9c35-466c-813a-004642bd81a1",
+  "fields": {
+    "nbr_of_boxes": 3,
+    "bee_species": "Apis Mellifera",
+    "bee_amount": "1000",
+    "beekeeper": "Ptolemy",
+    "picture": "DCIM/3.jpg",
+    "disease": 0,
+    "kind_of_disease": null,
+    "average_harvest": 9,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.250919018379555 46.81491172949384)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "1e90e07e-422f-476a-a6fd-cc20b74a807f",
+  "fields": {
+    "nbr_of_boxes": 10,
+    "bee_species": "Apis Mellifera",
+    "bee_amount": "100000",
+    "beekeeper": "Mae Jemison",
+    "picture": "DCIM/3.jpg",
+    "disease": 1,
+    "kind_of_disease": "AFB",
+    "average_harvest": 100,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.258096471059726 46.809466060919625)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "24b50311-53a8-4db3-a122-9fa06565a9a1",
+  "fields": {
+    "nbr_of_boxes": 3,
+    "bee_species": "Apis Mellifera Carnica",
+    "bee_amount": "1000",
+    "beekeeper": "Isaac Newton",
+    "picture": "DCIM/1.jpg",
+    "disease": 0,
+    "kind_of_disease": null,
+    "average_harvest": 100,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.251059853929743 46.80690558876484)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "3180afb7-080d-4382-91fc-4a30c1ddd001",
+  "fields": {
+    "nbr_of_boxes": 7,
+    "bee_species": "Apis Mellifera Carnica",
+    "bee_amount": "1000",
+    "beekeeper": "Stephen Hawking",
+    "picture": "DCIM/3.jpg",
+    "disease": 0,
+    "kind_of_disease": null,
+    "average_harvest": 10,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.263861631092261 46.811043784354986)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "37742624-857e-4dc6-b5aa-774cc82720c1",
+  "fields": {
+    "nbr_of_boxes": 10,
+    "bee_species": "Apis Mellifera Carnica",
+    "bee_amount": "1000",
+    "beekeeper": "Erasmus of Rotterdam",
+    "picture": "DCIM/3.jpg",
+    "disease": 0,
+    "kind_of_disease": null,
+    "average_harvest": null,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.25449268008546 46.80726225440719)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "45b7d175-db7a-4aa4-9694-88dc3bad5fa6",
+  "fields": {
+    "nbr_of_boxes": 4,
+    "bee_species": "Apis Mellifera",
+    "bee_amount": "100000",
+    "beekeeper": "Elizabeth Blackburn",
+    "picture": "DCIM/2.jpg",
+    "disease": 0,
+    "kind_of_disease": null,
+    "average_harvest": 100,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.259369589563951 46.80664097885105)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "4bbe6420-a9e9-4829-9a9f-5f019ceb51a5",
+  "fields": {
+    "nbr_of_boxes": 6,
+    "bee_species": "Apis Mellifera Carnica",
+    "bee_amount": "100000",
+    "beekeeper": "Gerardus Mercator",
+    "picture": "DCIM/2.jpg",
+    "disease": 0,
+    "kind_of_disease": null,
+    "average_harvest": 67,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.249719641847953 46.814385141214935)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "4ce89f9f-de89-4ba3-812d-77ddb87f4175",
+  "fields": {
+    "nbr_of_boxes": 2,
+    "bee_species": "Apis Mellifera Mellifera",
+    "bee_amount": "1000",
+    "beekeeper": "Sheldon Cooper",
+    "picture": "DCIM/4.jpg",
+    "disease": 0,
+    "kind_of_disease": null,
+    "average_harvest": 2,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.25484539692945 46.8073737760447)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "52f18a59-6f33-424a-979b-260b752a56d2",
+  "fields": {
+    "nbr_of_boxes": 2,
+    "bee_species": "Apis Mellifera Mellifera",
+    "bee_amount": "1000",
+    "beekeeper": "Marco Bernasocchi",
+    "picture": "DCIM/2.jpg",
+    "disease": 0,
+    "kind_of_disease": null,
+    "average_harvest": null,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.259150177476153 46.80911413560043)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "555a66d9-4a35-4bbd-bf70-e790b35a2a57",
+  "fields": {
+    "nbr_of_boxes": 5,
+    "bee_species": "Apis Mellifera Carnica",
+    "bee_amount": "1000",
+    "beekeeper": "Mac Moneysack",
+    "picture": "DCIM/3.jpg",
+    "disease": 1,
+    "kind_of_disease": "EFB",
+    "average_harvest": 20,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.258081497786623 46.809675838036846)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "72ea5739-89f2-4559-a800-f544024b14b8",
+  "fields": {
+    "nbr_of_boxes": 10,
+    "bee_species": "Apis Mellifera Carnica",
+    "bee_amount": "10000",
+    "beekeeper": "Al Idrisi",
+    "picture": "DCIM/4.jpg",
+    "disease": 0,
+    "kind_of_disease": null,
+    "average_harvest": 568,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.257418295320152 46.80948269256766)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "77bc4dda-2455-498c-8790-c867e049f985",
+  "fields": {
+    "nbr_of_boxes": 10,
+    "bee_species": "Apis Mellifera",
+    "bee_amount": "100000",
+    "beekeeper": "Elizabeth Blackburn",
+    "picture": "DCIM/4.jpg",
+    "disease": 1,
+    "kind_of_disease": "EFB",
+    "average_harvest": 100,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.259165720789479 46.809019533562754)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "7c0cd3cb-f202-418b-93ac-b82dd11c07af",
+  "fields": {
+    "nbr_of_boxes": 6,
+    "bee_species": "Apis Mellifera Carnica",
+    "bee_amount": "100000",
+    "beekeeper": "Denis Rouzaud",
+    "picture": "DCIM/4.jpg",
+    "disease": 1,
+    "kind_of_disease": "EFB",
+    "average_harvest": 100,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.249582298993243 46.81472540694116)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "82417071-c18a-4d6a-b2cd-44e46e3e65b6",
+  "fields": {
+    "nbr_of_boxes": 3,
+    "bee_species": "Apis Mellifera Mellifera",
+    "bee_amount": "1000",
+    "beekeeper": "Sheldon Cooper",
+    "picture": "DCIM/2.jpg",
+    "disease": 0,
+    "kind_of_disease": null,
+    "average_harvest": null,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.257754642077662 46.80740841461754)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "882c0ee8-b8ca-4b17-9524-669f3fff2714",
+  "fields": {
+    "nbr_of_boxes": 8,
+    "bee_species": "Apis Mellifera Carnica",
+    "bee_amount": "100000",
+    "beekeeper": "Ptolemy",
+    "picture": "DCIM/2.jpg",
+    "disease": 0,
+    "kind_of_disease": null,
+    "average_harvest": 99,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.260026351052357 46.80805880307137)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "8f23aced-d901-4522-89ca-4bc034ad3ef7",
+  "fields": {
+    "nbr_of_boxes": 5,
+    "bee_species": "Apis Mellifera Carnica",
+    "bee_amount": "1000",
+    "beekeeper": "Isaac Newton",
+    "picture": "DCIM/1.jpg",
+    "disease": 0,
+    "kind_of_disease": null,
+    "average_harvest": 100,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.259922016659887 46.808003166897606)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "91588d3f-807b-4eaa-9852-625ccede3157",
+  "fields": {
+    "nbr_of_boxes": 5,
+    "bee_species": "Apis Mellifera Mellifera",
+    "bee_amount": "10000",
+    "beekeeper": "Matthias Kuhn",
+    "picture": "DCIM/2.jpg",
+    "disease": 1,
+    "kind_of_disease": "EFB",
+    "average_harvest": null,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.251929594935298 46.807235790973635)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "92ea9423-a042-4e19-8a55-8c9650438de1",
+  "fields": {
+    "nbr_of_boxes": 3,
+    "bee_species": "Apis Mellifera",
+    "bee_amount": "10000",
+    "beekeeper": "Samantha Cristoforetti",
+    "picture": "DCIM/3.jpg",
+    "disease": 0,
+    "kind_of_disease": null,
+    "average_harvest": 369,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.258021821013319 46.80801063000084)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "99b841c3-b65a-4f44-96c9-e23cd09d23f3",
+  "fields": {
+    "nbr_of_boxes": 6,
+    "bee_species": "Apis Mellifera Carnica",
+    "bee_amount": "100000",
+    "beekeeper": "Mario Baranzini",
+    "picture": "DCIM/3.jpg",
+    "disease": 0,
+    "kind_of_disease": null,
+    "average_harvest": null,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.249640190698733 46.81454869819847)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "a71d03b1-2bc3-4726-8f53-6c6cc9264f9d",
+  "fields": {
+    "nbr_of_boxes": 5,
+    "bee_species": "Apis Mellifera",
+    "bee_amount": "1000",
+    "beekeeper": "Mae Jemison",
+    "picture": "DCIM/4.jpg",
+    "disease": 0,
+    "kind_of_disease": null,
+    "average_harvest": 12,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.263196273566487 46.80961767639482)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "ad3118ae-825e-4916-b0f6-9a97c4db2e01",
+  "fields": {
+    "nbr_of_boxes": 1,
+    "bee_species": "Apis Mellifera Mellifera",
+    "bee_amount": "1000",
+    "beekeeper": "Erasmus of Rotterdam",
+    "picture": "DCIM/2.jpg",
+    "disease": 0,
+    "kind_of_disease": null,
+    "average_harvest": 45,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.256400883811564 46.81128890823968)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "b4d343df-98cb-4255-a54b-337fe17e397e",
+  "fields": {
+    "nbr_of_boxes": 3,
+    "bee_species": "Apis Mellifera Carnica",
+    "bee_amount": "1000",
+    "beekeeper": "Nicolau Copernicus",
+    "picture": "DCIM/3.jpg",
+    "disease": 0,
+    "kind_of_disease": null,
+    "average_harvest": null,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.252743428922635 46.80649447495006)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "b7494aa9-8847-4633-ae88-02fb33ecabc4",
+  "fields": {
+    "nbr_of_boxes": 10,
+    "bee_species": "Apis Mellifera Carnica",
+    "bee_amount": "1000",
+    "beekeeper": "Rita Levi Montalcini",
+    "picture": "DCIM/2.jpg",
+    "disease": 0,
+    "kind_of_disease": null,
+    "average_harvest": 20,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.263390111620055 46.810162923660705)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "bab30a82-dd39-429a-be95-00561dd91dd2",
+  "fields": {
+    "nbr_of_boxes": 3,
+    "bee_species": "Apis Mellifera",
+    "bee_amount": "1000",
+    "beekeeper": "Marie Curie",
+    "picture": "DCIM/3.jpg",
+    "disease": 0,
+    "kind_of_disease": null,
+    "average_harvest": 9,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.250479354234951 46.81535825970133)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "bfead805-8a6b-462b-bfce-4c045b4a8a69",
+  "fields": {
+    "nbr_of_boxes": 3,
+    "bee_species": "Apis Mellifera Carnica",
+    "bee_amount": "1000",
+    "beekeeper": "Albert Einstein",
+    "picture": "DCIM/1.jpg",
+    "disease": 0,
+    "kind_of_disease": null,
+    "average_harvest": null,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.25842889645867 46.80717063811449)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "d6a44bf1-9a33-4b4a-9b2d-9f88928aaf24",
+  "fields": {
+    "nbr_of_boxes": 4,
+    "bee_species": "Apis Mellifera",
+    "bee_amount": "10000",
+    "beekeeper": "Stephen Hawking",
+    "picture": "DCIM/4.jpg",
+    "disease": 0,
+    "kind_of_disease": null,
+    "average_harvest": 10,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.258077493147262 46.809587547607435)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "d89d4955-0d11-43b9-a6e5-32add1729628",
+  "fields": {
+    "nbr_of_boxes": 10,
+    "bee_species": "Apis Mellifera",
+    "bee_amount": "100000",
+    "beekeeper": "Rita Levi Montalcini",
+    "picture": "DCIM/4.jpg",
+    "disease": 1,
+    "kind_of_disease": "EFB",
+    "average_harvest": 20,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.259313172102743 46.811121062249136)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "e8dbe6a8-a1eb-42f4-947d-3346bae8ea8d",
+  "fields": {
+    "nbr_of_boxes": 6,
+    "bee_species": "Apis Mellifera Carnica",
+    "bee_amount": "100000",
+    "beekeeper": "Gerardus Mercator",
+    "picture": "DCIM/3.jpg",
+    "disease": 1,
+    "kind_of_disease": "AFB",
+    "average_harvest": null,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.249716659366962 46.814895061747556)"
+  }
+},
+{
+  "model": "oapif_demo.apiary",
+  "pk": "fb42e6db-91ba-40a5-8dcb-8bfd598fced8",
+  "fields": {
+    "nbr_of_boxes": 3,
+    "bee_species": "Apis Mellifera",
+    "bee_amount": "10000",
+    "beekeeper": "Galileo Galilei",
+    "picture": "DCIM/1.jpg",
+    "disease": 0,
+    "kind_of_disease": null,
+    "average_harvest": 369,
+    "area": null,
+    "source": null,
+    "quality": null,
+    "x": null,
+    "y": null,
+    "z": null,
+    "horizontal_accuracy": null,
+    "nr_used_satellites": null,
+    "fix_status_descr": null,
+    "position_locked": null,
+    "geom": "SRID=4326;POINT (9.254526404724938 46.80822882388107)"
+  }
+},
+{
+  "model": "oapif_demo.area",
+  "pk": "064a2978-83fe-4e93-ab3c-1ed5b2a76258",
+  "fields": {
+    "proprietor": "cantonal",
+    "plant_species": "lavender",
+    "picture": "DCIM/lavender.jpg",
+    "review_date": "2019-05-23",
+    "reviewer": "Mario Baranzini",
+    "geom": "SRID=4326;POLYGON ((9.262002882385577 46.8113760828532, 9.262005654539692 46.811347560039806, 9.261998776569083 46.81106512119132, 9.262150091922425 46.81141816952018, 9.262356431040613 46.81179475184989, 9.263106129836705 46.812510251011915, 9.262414383976857 46.81254149276289, 9.262684593744769 46.812329595456056, 9.262700329570931 46.81231725546493, 9.262473356540921 46.81207247962863, 9.26228341873725 46.81187749097958, 9.26219823771667 46.811790044587035, 9.26209642978627 46.81162165811665, 9.262033166422116 46.81151702263696, 9.262002882385577 46.8113760828532))"
+  }
+},
+{
+  "model": "oapif_demo.area",
+  "pk": "1686c3c2-d574-4406-afc2-fbd9f2b1499e",
+  "fields": {
+    "proprietor": "private",
+    "plant_species": "weed",
+    "picture": "DCIM/weed.jpg",
+    "review_date": "2020-05-25",
+    "reviewer": "Dave Signer",
+    "geom": "SRID=4326;POLYGON ((9.2542208874952 46.80696986261667, 9.254367986148992 46.807211501064515, 9.255136581799453 46.807116433929046, 9.254721022918092 46.80697112115306, 9.254459922807609 46.80684778444644, 9.254393728413403 46.8069056772215, 9.254290759355749 46.80695853578779, 9.2542208874952 46.80696986261667))"
+  }
+},
+{
+  "model": "oapif_demo.area",
+  "pk": "1ea9bdf9-8646-4d7d-adc8-5cde5d28478e",
+  "fields": {
+    "proprietor": "cantonal",
+    "plant_species": "grass",
+    "picture": "DCIM/grass.jpg",
+    "review_date": "2019-05-23",
+    "reviewer": "Denis Rouzard",
+    "geom": "SRID=4326;POLYGON ((9.256400639246742 46.80641135832459, 9.257269206685702 46.80657404342421, 9.257389580989134 46.80649385139095, 9.257452246943549 46.806454097240696, 9.257657057623831 46.80636517337716, 9.257670049346084 46.806353665572324, 9.257577578852377 46.80627624936665, 9.25742358873269 46.80637275806537, 9.256543208495078 46.80623309501444, 9.256427047213727 46.80635078862074, 9.256400639246742 46.80641135832459))"
+  }
+},
+{
+  "model": "oapif_demo.area",
+  "pk": "285817c0-5c64-4451-acfb-80897818aa39",
+  "fields": {
+    "proprietor": "private",
+    "plant_species": "grass",
+    "picture": "DCIM/grass.jpg",
+    "review_date": "2019-05-23",
+    "reviewer": "Marco Bernasocchi",
+    "geom": "SRID=4326;POLYGON ((9.25575574630408 46.80559515590127, 9.256079709698108 46.80578245689256, 9.256315853355593 46.8052112421473, 9.25630209741438 46.80504332896698, 9.256022393276389 46.80504332896698, 9.255990296080226 46.80511551600593, 9.255910053089819 46.80513905523682, 9.25583210275628 46.80545761848185, 9.25575574630408 46.80559515590127))"
+  }
+},
+{
+  "model": "oapif_demo.area",
+  "pk": "3ecb3e04-b1a8-4b82-9f96-88579f221364",
+  "fields": {
+    "proprietor": "private",
+    "plant_species": "weed",
+    "picture": "DCIM/weed.jpg",
+    "review_date": "2019-05-23",
+    "reviewer": "Marco Bernasocchi",
+    "geom": "SRID=4326;POLYGON ((9.266008633432582 46.81489204147711, 9.265809172284998 46.8146613983968, 9.266036145315008 46.814557844038966, 9.265375860136798 46.813974170292674, 9.265169521018608 46.81408243283706, 9.26484625640011 46.813767058730924, 9.265458395784075 46.81375764455007, 9.265719758667116 46.81412479638205, 9.26725354611233 46.8143271995253, 9.267363593642031 46.814468410569454, 9.266833989905344 46.81460020720945, 9.266854623817162 46.81465669138486, 9.266077413138646 46.81497676725819, 9.266008633432582 46.81489204147711))"
+  }
+},
+{
+  "model": "oapif_demo.area",
+  "pk": "524bd130-62e6-4644-bf6c-a63d52d6e1dc",
+  "fields": {
+    "proprietor": "national",
+    "plant_species": "lavender",
+    "picture": "DCIM/lavender.jpg",
+    "review_date": "2019-05-23",
+    "reviewer": "Marco Bernasocchi",
+    "geom": "SRID=4326;POLYGON ((9.256297937015782 46.8069556485174, 9.256198169134281 46.80696569072013, 9.256312608763064 46.80663429703996, 9.256400639246742 46.80641135832459, 9.257269206685702 46.80657404342421, 9.25719878229876 46.806642330850295, 9.257037393078683 46.80665839846736, 9.256768730451565 46.80668041348184, 9.25656789716573 46.8067588209653, 9.25640944229511 46.806803006804984, 9.256315543112521 46.80689539526161, 9.256297937015782 46.8069556485174))"
+  }
+},
+{
+  "model": "oapif_demo.area",
+  "pk": "5e5c21c9-68ca-4560-8498-484084c266da",
+  "fields": {
+    "proprietor": "cantonal",
+    "plant_species": "colza",
+    "picture": "DCIM/colza.jpg",
+    "review_date": "2019-05-23",
+    "reviewer": "Marco Bernasocchi",
+    "geom": "SRID=4326;POLYGON ((9.25570142131476 46.80569300883025, 9.255371278725656 46.80556119036204, 9.255424009833638 46.805361892778905, 9.25583210275628 46.80545761848185, 9.25570142131476 46.80569300883025))"
+  }
+},
+{
+  "model": "oapif_demo.area",
+  "pk": "679cdd75-45b1-425b-8242-d86d874d7eba",
+  "fields": {
+    "proprietor": "cantonal",
+    "plant_species": "taraxacum",
+    "picture": "DCIM/taraxacum.jpg",
+    "review_date": "2019-05-23",
+    "reviewer": "Marco Bernasocchi",
+    "geom": "SRID=4326;POLYGON ((9.255951320913452 46.80825242006277, 9.255772493677686 46.80830891090519, 9.255693397015714 46.808278311706246, 9.25544922905919 46.80845955286159, 9.255538642677072 46.808617255707674, 9.255456107029795 46.808803203245624, 9.2551362813966 46.80888558486074, 9.255174110234936 46.80919863384748, 9.255242889940998 46.80925512369615, 9.255511130794646 46.80917038890091, 9.255703713971624 46.80936810321549, 9.255824078457234 46.80941753168058, 9.256164538002249 46.809445776497384, 9.256439656826503 46.80944106902894, 9.256449973782411 46.80934691957369, 9.255951320913452 46.80825242006277))"
+  }
+},
+{
+  "model": "oapif_demo.area",
+  "pk": "6d0b747b-7b1d-4c58-91ea-b1272d15805f",
+  "fields": {
+    "proprietor": "national",
+    "plant_species": "grass",
+    "picture": "DCIM/grass.jpg",
+    "review_date": "2019-05-23",
+    "reviewer": "Marco Bernasocchi",
+    "geom": "SRID=4326;POLYGON ((9.262591249255852 46.80992733363082, 9.262134723956855 46.81007561734805, 9.261740100393316 46.809064102445575, 9.261291312811252 46.808333257851544, 9.26109786988795 46.80813730507657, 9.261507968885352 46.80815848919476, 9.261693674091722 46.80847624996654, 9.261562132903878 46.808523913920396, 9.262065084504465 46.80947718412783, 9.262366855464819 46.80939774558915, 9.262591249255852 46.80992733363082))"
+  }
+},
+{
+  "model": "oapif_demo.area",
+  "pk": "7dd3d29c-8dec-4e1f-aad7-a218b937b5df",
+  "fields": {
+    "proprietor": "national",
+    "plant_species": "grass",
+    "picture": "DCIM/grass.jpg",
+    "review_date": "2019-05-23",
+    "reviewer": "Marco Bernasocchi",
+    "geom": "SRID=4326;POLYGON ((9.256162245345386 46.80855370387012, 9.25625823218877 46.80833384052671, 9.256781262699956 46.808591364227375, 9.256859213033495 46.80865099307244, 9.257047210896737 46.80871689856113, 9.25760203385898 46.8091499897636, 9.257363597544629 46.809335150880216, 9.257303988466038 46.80944499191935, 9.256814506224549 46.809542279509536, 9.256597850150449 46.80945283769927, 9.256522192473778 46.80939634805824, 9.256162245345386 46.80855370387012))"
+  }
+},
+{
+  "model": "oapif_demo.area",
+  "pk": "84ac5af7-3e70-4fe8-8eeb-b10674ffeb96",
+  "fields": {
+    "proprietor": "private",
+    "plant_species": "grass",
+    "picture": "DCIM/grass.jpg",
+    "review_date": "2020-05-25",
+    "reviewer": "Dave Signer",
+    "geom": "SRID=4326;POLYGON ((9.254103208572168 46.80698496505146, 9.254044369110652 46.80723667167374, 9.253860495793411 46.80722660343146, 9.253904625389548 46.80758905896619, 9.254007594447202 46.8076696043089, 9.25423559736058 46.80770987693503, 9.254441535475888 46.807704842858406, 9.254367986148992 46.807211501064515, 9.2542208874952 46.80696986261667, 9.254103208572168 46.80698496505146))"
+  }
+},
+{
+  "model": "oapif_demo.area",
+  "pk": "b9ab211a-9ac5-4e1d-acec-340fac9dea68",
+  "fields": {
+    "proprietor": "national",
+    "plant_species": "grass",
+    "picture": "DCIM/grass.jpg",
+    "review_date": "2019-05-23",
+    "reviewer": "Marco Bernasocchi",
+    "geom": "SRID=4326;POLYGON ((9.252420247226054 46.805893089816514, 9.252698422926134 46.806418266172194, 9.25400676577925 46.80646848196952, 9.254660937205808 46.80539510909403, 9.253572689412094 46.805300952556856, 9.253578803163744 46.805506004359785, 9.253480983137344 46.80565456181038, 9.25331591184279 46.805723609499864, 9.253004110508638 46.805817765297256, 9.252566977265655 46.805901459201024, 9.252420247226054 46.805893089816514))"
+  }
+},
+{
+  "model": "oapif_demo.area",
+  "pk": "bf29c1ea-9d21-4b03-af69-a32ad6dd316f",
+  "fields": {
+    "proprietor": "private",
+    "plant_species": "taraxacum",
+    "picture": "DCIM/taraxacum.jpg",
+    "review_date": "2019-05-23",
+    "reviewer": "Marco Bernasocchi",
+    "geom": "SRID=4326;POLYGON ((9.257778316316314 46.80734026354307, 9.25784727352853 46.807278002289436, 9.257982253603503 46.80719163978606, 9.258073218436639 46.80721975782564, 9.25804240776735 46.80690644169689, 9.257907427692377 46.80695665273775, 9.25762132862042 46.80664735198114, 9.25745407070143 46.80667547030524, 9.257348434121015 46.80677589277129, 9.257462873749798 46.80725390113966, 9.257512757690549 46.80730009500059, 9.257778316316314 46.80734026354307))"
+  }
+},
+{
+  "model": "oapif_demo.area",
+  "pk": "c25a0d8a-802d-45d5-a8a4-8853def4d0e4",
+  "fields": {
+    "proprietor": "private",
+    "plant_species": "lavender",
+    "picture": "DCIM/lavender.jpg",
+    "review_date": "2019-05-23",
+    "reviewer": "Marco Bernasocchi",
+    "geom": "SRID=4326;POLYGON ((9.253572689412094 46.805300952556856, 9.253579567382703 46.80507706857335, 9.253765272589073 46.80507236072256, 9.253923465913019 46.804981342193216, 9.254053001026104 46.8046698379575, 9.254126366045906 46.80436225517908, 9.254406070183895 46.8042869285163, 9.254759139341688 46.80429320574222, 9.25485084561644 46.80432773047173, 9.255080111303318 46.804415611501405, 9.255194744146758 46.804516046788116, 9.255050306764025 46.80476713418452, 9.255027380195337 46.80476713418452, 9.254937966577454 46.804957018249794, 9.254915040008767 46.80493975608974, 9.254798114508459 46.80496329539753, 9.254759139341688 46.80506686822947, 9.25484855295957 46.805093546047814, 9.254784358567246 46.80519711862896, 9.254685774321887 46.80517357942348, 9.254614701958955 46.80529755245661, 9.25461763815192 46.8053913628098, 9.253572689412094 46.805300952556856))"
+  }
+},
+{
+  "model": "oapif_demo.area",
+  "pk": "c7407437-2fec-4871-a45f-a940c7de458e",
+  "fields": {
+    "proprietor": "national",
+    "plant_species": "taraxacum",
+    "picture": "DCIM/taraxacum.jpg",
+    "review_date": "2019-05-23",
+    "reviewer": "Matthias Kuhn",
+    "geom": "SRID=4326;POLYGON ((9.25583210275628 46.80545761848185, 9.255433565236347 46.80536413417635, 9.255396497951212 46.8051139467235, 9.255534057363338 46.80470593173966, 9.255811468844463 46.805038621113255, 9.255838980726887 46.805106100310695, 9.255910053089819 46.80513905523682, 9.25583210275628 46.80545761848185))"
+  }
+},
+{
+  "model": "oapif_demo.area",
+  "pk": "cb5e0f73-eff6-46e7-953a-f72d468e766c",
+  "fields": {
+    "proprietor": "national",
+    "plant_species": "lavender",
+    "picture": "DCIM/lavender.jpg",
+    "review_date": "2020-05-25",
+    "reviewer": "Maya Mielina",
+    "geom": "SRID=4326;POLYGON ((9.25767792780737 46.809126240592256, 9.257670480012017 46.80909246963151, 9.257569253815655 46.80909246963151, 9.25744671684111 46.80896411473704, 9.257511714714564 46.808871494821794, 9.257254914621011 46.808793529955295, 9.257163423150681 46.80880761338084, 9.25760203385898 46.8091499897636, 9.25767792780737 46.809126240592256))"
+  }
+},
+{
+  "model": "oapif_demo.area",
+  "pk": "cbcf9a6e-74fa-41eb-90dc-1dc0590a8143",
+  "fields": {
+    "proprietor": "national",
+    "plant_species": "taraxacum",
+    "picture": "DCIM/taraxacum.jpg",
+    "review_date": "2019-05-23",
+    "reviewer": "David Signer",
+    "geom": "SRID=4326;POLYGON ((9.261998776569083 46.81135697464255, 9.262033166422116 46.81151702263696, 9.26219823771667 46.811790044587035, 9.262473356540921 46.81207247962863, 9.262700329570931 46.81231725546493, 9.262370186981828 46.81257615177178, 9.262143213951816 46.81325869060674, 9.260348063623562 46.81312689067899, 9.260244894064467 46.81172885013253, 9.26144166094997 46.811710021055596, 9.261998776569083 46.81135697464255))"
+  }
+},
+{
+  "model": "oapif_demo.area",
+  "pk": "ea7515cc-ec4a-46f1-84d5-9c05de1f5bf5",
+  "fields": {
+    "proprietor": "private",
+    "plant_species": "taraxacum",
+    "picture": "DCIM/taraxacum.jpg",
+    "review_date": "2020-05-25",
+    "reviewer": "Dave Signer",
+    "geom": "SRID=4326;POLYGON ((9.254441535475888 46.807704842858406, 9.254827846747391 46.80752063774427, 9.25490238209438 46.80743536874253, 9.255039682051178 46.80727902023061, 9.255136543829334 46.80711643392904, 9.254367986148992 46.807211501064515, 9.254441535475888 46.807704842858406))"
+  }
+},
+{
+  "model": "oapif_demo.tracks",
+  "pk": "ffe7d709-9850-4f2b-b68c-2486ed4704fe",
+  "fields": {
+    "name": "Munt Sura",
+    "region": "",
+    "editor": "Linda Camathiias",
+    "geom": "SRID=4326;LINESTRING (9.249759978087646 46.81427275475284, 9.249759978087646 46.81412872832248, 9.249287882566996 46.81375503632603, 9.248758908067957 46.813307381036815, 9.248411946299768 46.81303100069344, 9.248173054590525 46.81266508650448, 9.248235621466756 46.81248212847638, 9.248372131014897 46.812439308422476, 9.24875322017012 46.812412059279524, 9.248997799777202 46.81248212847638, 9.249174124610215 46.812626159316586, 9.24920256409941 46.812672871938666, 9.249322009954032 46.8126962282345, 9.249862360248748 46.812731262659234, 9.249953366614175 46.81270012094948, 9.250152443038544 46.81251327031235, 9.250277576791005 46.812493806666986, 9.250613162763516 46.81260280299032, 9.25077242390301 46.812626159316586, 9.251068194590646 46.81260280299032, 9.251284334708535 46.81264173019512, 9.251648360170238 46.81283247309135, 9.251790557616218 46.812910327140294, 9.251875876083805 46.812910327140294, 9.251995321938427 46.81275851164046, 9.252052200916818 46.812610588433536, 9.252057888814658 46.81252494849619, 9.251847436594609 46.8123108480562, 9.251597169089687 46.81218628013526, 9.251591481191847 46.8121590308641, 9.251750742331343 46.812135674334975, 9.2521659588736 46.81224467138413, 9.252575487518017 46.81222131489219, 9.252871258205653 46.81225245687918, 9.253155653097611 46.812373131908465, 9.253138589404093 46.812450986622366, 9.253030519345149 46.81255609030735, 9.252928137184044 46.812653408351046, 9.252928137184044 46.8131438886109, 9.25348555117228 46.8136110085091, 9.253912143510217 46.813758928964354, 9.254327360052473 46.81395356052244, 9.25494734091694 46.81405866127091, 9.255191920524023 46.814128728322466, 9.255305678480806 46.81440510302443, 9.255385309050554 46.814747649979616, 9.255794837694971 46.81496174071859, 9.256050793097733 46.81499677366746, 9.256192990543711 46.81494227795936, 9.256648022370843 46.81440121043285, 9.257398824885609 46.81377839215186, 9.257438640170482 46.81364604233791, 9.257415888579127 46.81330348836576, 9.2577173471646 46.812801331440205, 9.25805862103495 46.81234977547231, 9.258553468146955 46.81187485907065, 9.258610347125346 46.81152840101728, 9.258815111447555 46.81125201153159, 9.258923181506498 46.81112744115821, 9.25830888853987 46.8110534773625, 9.258234945867963 46.81094447789921, 9.25804724523927 46.81086272815678, 9.258104124217663 46.8107225854521, 9.258138251604697 46.81060190671934, 9.258280449050677 46.810547406557724, 9.258365767518262 46.81033329824532, 9.258246321663641 46.81006468842982, 9.258098436319823 46.80970653992243, 9.258126875809019 46.80931724536164, 9.258360079620426 46.80890848304034, 9.25833732802907 46.80873719123922, 9.258138251604699 46.80826613597343, 9.258308888539874 46.80791186855153, 9.258684289797257 46.80735905099018, 9.258741168775645 46.80712935751579, 9.258166691093892 46.80638187365723, 9.258166691093892 46.80638187365723, 9.258166691093892 46.80638187365723)"
+  }
+},
+{
+  "model": "oapif_demo.reviews",
+  "pk": "1d7b8c1d-354a-49f5-8f41-0f59cb208e15",
+  "fields": {
+    "reviewer": "Pete Penika ",
+    "review_date": "2022-02-03",
+    "apiary": "1e90e07e-422f-476a-a6fd-cc20b74a807f"
+  }
+},
+{
+  "model": "oapif_demo.reviews",
+  "pk": "2cb8dba5-4976-4c51-a23a-9b3ca24371a3",
+  "fields": {
+    "reviewer": "Maya Mielina",
+    "review_date": "2022-05-25",
+    "apiary": "1511c328-29db-43d0-be29-e49be6ddb1dd"
+  }
+},
+{
+  "model": "oapif_demo.reviews",
+  "pk": "3a47f436-c6f6-4986-8fa5-084cc91d395b",
+  "fields": {
+    "reviewer": "Matteo Molino",
+    "review_date": "2022-09-24",
+    "apiary": "07453566-026b-4516-a449-a864fe768f8b"
+  }
+},
+{
+  "model": "oapif_demo.reviews",
+  "pk": "6315771e-489d-4541-b5c1-61e635c705d1",
+  "fields": {
+    "reviewer": "Maya Mielina",
+    "review_date": "2021-06-26",
+    "apiary": "009f64b2-d6e4-46b0-aba8-39946379e053"
+  }
+},
+{
+  "model": "oapif_demo.reviews",
+  "pk": "6c2ea82a-3781-4087-b56b-90d32cd296d6",
+  "fields": {
+    "reviewer": "Linda Camathias",
+    "review_date": "2022-10-06",
+    "apiary": "014be504-b170-44ef-96d6-333e874bd30e"
+  }
+},
+{
+  "model": "oapif_demo.reviews",
+  "pk": "740f4de4-bce6-49ce-843f-87bcb76ed080",
+  "fields": {
+    "reviewer": "Mack Moneysck",
+    "review_date": "2022-02-03",
+    "apiary": "72ea5739-89f2-4559-a800-f544024b14b8"
+  }
+},
+{
+  "model": "oapif_demo.reviews",
+  "pk": "7b015261-68e5-4b25-a528-f957dfb62784",
+  "fields": {
+    "reviewer": "Mario Baranzini",
+    "review_date": "2022-10-20",
+    "apiary": "24b50311-53a8-4db3-a122-9fa06565a9a1"
+  }
+},
+{
+  "model": "oapif_demo.reviews",
+  "pk": "881c613d-49ea-4886-9133-96f1484dc620",
+  "fields": {
+    "reviewer": "Mack Moneysack ",
+    "review_date": "2022-02-06",
+    "apiary": "72ea5739-89f2-4559-a800-f544024b14b8"
+  }
+},
+{
+  "model": "oapif_demo.reviews",
+  "pk": "9805e723-f7a1-4ed6-b026-4169f76fbf1c",
+  "fields": {
+    "reviewer": "Maya Mielina",
+    "review_date": "2022-10-03",
+    "apiary": "92ea9423-a042-4e19-8a55-8c9650438de1"
+  }
+},
+{
+  "model": "oapif_demo.reviews",
+  "pk": "a79d7873-7702-4bc4-b43e-e24a18bc3142",
+  "fields": {
+    "reviewer": "Linda Camathias ",
+    "review_date": "2022-10-13",
+    "apiary": "ad3118ae-825e-4916-b0f6-9a97c4db2e01"
+  }
+},
+{
+  "model": "oapif_demo.reviews",
+  "pk": "b0076270-ad05-4c55-a509-0b010156b3ed",
+  "fields": {
+    "reviewer": "David Signer",
+    "review_date": "2022-10-04",
+    "apiary": "014be504-b170-44ef-96d6-333e874bd30e"
+  }
+},
+{
+  "model": "oapif_demo.reviews",
+  "pk": "b00a22f5-b0c3-411c-93ca-c29974f82d28",
+  "fields": {
+    "reviewer": "David Signer",
+    "review_date": "2021-06-25",
+    "apiary": "014be504-b170-44ef-96d6-333e874bd30e"
+  }
+},
+{
+  "model": "oapif_demo.reviews",
+  "pk": "ce695884-992d-4768-875d-0b1ac47a4192",
+  "fields": {
+    "reviewer": "Maya Mielina",
+    "review_date": "2022-10-21",
+    "apiary": "72ea5739-89f2-4559-a800-f544024b14b8"
+  }
+},
+{
+  "model": "oapif_demo.pollenconsumption",
+  "pk": "11b370dc-887c-44e9-abf7-b062b5ec6a04",
+  "fields": {
+    "percentage": 33,
+    "apiary": "0235be9c-2026-42ac-a99c-f9e8183fc602",
+    "area": "064a2978-83fe-4e93-ab3c-1ed5b2a76258"
+  }
+},
+{
+  "model": "oapif_demo.pollenconsumption",
+  "pk": "31b41ea2-b08d-4589-a1fc-4db6cd3cf1c4",
+  "fields": {
+    "percentage": 14,
+    "apiary": "0235be9c-2026-42ac-a99c-f9e8183fc602",
+    "area": "b9ab211a-9ac5-4e1d-acec-340fac9dea68"
+  }
+},
+{
+  "model": "oapif_demo.pollenconsumption",
+  "pk": "47ae91f6-eec6-4637-9570-ad9cf83f24b3",
+  "fields": {
+    "percentage": 50,
+    "apiary": "91588d3f-807b-4eaa-9852-625ccede3157",
+    "area": "b9ab211a-9ac5-4e1d-acec-340fac9dea68"
+  }
+},
+{
+  "model": "oapif_demo.pollenconsumption",
+  "pk": "49641864-57d9-4e43-92dc-c82ebea875bd",
+  "fields": {
+    "percentage": 50,
+    "apiary": "37742624-857e-4dc6-b5aa-774cc82720c1",
+    "area": "1686c3c2-d574-4406-afc2-fbd9f2b1499e"
+  }
+},
+{
+  "model": "oapif_demo.pollenconsumption",
+  "pk": "5cbeaae0-9123-4161-bd5e-2d8031014daa",
+  "fields": {
+    "percentage": 10,
+    "apiary": "0235be9c-2026-42ac-a99c-f9e8183fc602",
+    "area": "064a2978-83fe-4e93-ab3c-1ed5b2a76258"
+  }
+},
+{
+  "model": "oapif_demo.pollenconsumption",
+  "pk": "633a3842-912a-4d71-a2a7-c1c0a0f83912",
+  "fields": {
+    "percentage": 44,
+    "apiary": "0235be9c-2026-42ac-a99c-f9e8183fc602",
+    "area": "c25a0d8a-802d-45d5-a8a4-8853def4d0e4"
+  }
+},
+{
+  "model": "oapif_demo.pollenconsumption",
+  "pk": "658cf61b-4e5b-4622-9af8-1ee0ce9c7c1e",
+  "fields": {
+    "percentage": 9,
+    "apiary": "82417071-c18a-4d6a-b2cd-44e46e3e65b6",
+    "area": "5e5c21c9-68ca-4560-8498-484084c266da"
+  }
+},
+{
+  "model": "oapif_demo.pollenconsumption",
+  "pk": "71564a5d-0ab1-40ee-887c-0924bd61b26b",
+  "fields": {
+    "percentage": 9,
+    "apiary": "1e90e07e-422f-476a-a6fd-cc20b74a807f",
+    "area": "1ea9bdf9-8646-4d7d-adc8-5cde5d28478e"
+  }
+},
+{
+  "model": "oapif_demo.pollenconsumption",
+  "pk": "748453eb-78a9-4e74-b88b-d4c106ace8c3",
+  "fields": {
+    "percentage": 8,
+    "apiary": "1e90e07e-422f-476a-a6fd-cc20b74a807f",
+    "area": "c7407437-2fec-4871-a45f-a940c7de458e"
+  }
+},
+{
+  "model": "oapif_demo.pollenconsumption",
+  "pk": "afc7b6d9-ccdf-48f1-af3a-09e89a927dd7",
+  "fields": {
+    "percentage": 20,
+    "apiary": "b4d343df-98cb-4255-a54b-337fe17e397e",
+    "area": "b9ab211a-9ac5-4e1d-acec-340fac9dea68"
+  }
+},
+{
+  "model": "oapif_demo.pollenconsumption",
+  "pk": "e1720731-87ce-4684-b6a5-f24ecf1878e2",
+  "fields": {
+    "percentage": 32,
+    "apiary": "1e90e07e-422f-476a-a6fd-cc20b74a807f",
+    "area": "524bd130-62e6-4644-bf6c-a63d52d6e1dc"
+  }
+},
+{
+  "model": "oapif_demo.pollenconsumption",
+  "pk": "f6dbb497-8c82-493e-91ae-9c3da4ebeb2e",
+  "fields": {
+    "percentage": 20,
+    "apiary": "4ce89f9f-de89-4ba3-812d-77ddb87f4175",
+    "area": null
+  }
+}
+]
