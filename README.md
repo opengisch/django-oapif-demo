@@ -4,7 +4,7 @@
 
 ```bash
 cp .example.env .env
-docker compose up
+docker compose --build up -d
 docker compose exec django python manage.py bootstrap
 ```
 
