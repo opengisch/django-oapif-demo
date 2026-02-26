@@ -37,6 +37,7 @@ services:
       POSTGRES_HOST: ${POSTGRES_HOST:?}
       POSTGRES_PORT: ${POSTGRES_PORT:?}
       POSTGRES_SSLMODE: ${POSTGRES_SSLMODE:?}
+      CADDY_DOMAIN: ${CADDY_DOMAIN:?}
     labels:
       caddy: ${CADDY_DOMAIN:?}
       caddy.reverse_proxy: "{{upstreams 8000}}"

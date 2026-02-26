@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 
 DEBUG = os.environ.get("DJANGO_DEBUG", "0") in ["1", "True", "true"]
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "django", os.getenv("API_HOST", "")]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "django", os.getenv("CADDY_DOMAIN", "")]
 # SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 # Application definition
