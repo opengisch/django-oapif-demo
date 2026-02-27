@@ -45,6 +45,12 @@ services:
     labels:
       caddy: ${CADDY_DOMAIN:?}
       caddy.reverse_proxy: "{{upstreams 8000}}"
+      caddy.handle_path: /static/*
+      caddy.handle_path.root: /static_volume
+      caddy.handle_path.file_server:
+      caddy.handle_path_1: /media/*
+      caddy.handle_path_1.root: /media_volume
+      caddy.handle_path_1.file_server:
     command: python3 manage.py runserver 0.0.0.0:8000
 
   postgres:
