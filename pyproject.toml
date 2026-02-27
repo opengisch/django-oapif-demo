@@ -8,4 +8,6 @@ dependencies = [
     "django[argon2]==5.2",
     "django-oapif @ git+https://github.com/opengisch/django-oapif@main",
     "psycopg[binary]>=3.3.3",
+    "django-unfold>=0.81.0",
+    "django-leaflet>=0.33.0",
 ]

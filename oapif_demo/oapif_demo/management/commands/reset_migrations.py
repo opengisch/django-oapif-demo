@@ -11,6 +11,8 @@ class Command(BaseCommand):
         app_name = "oapif_demo"
         migrations_path = Path(app_name) / "migrations"
 
+        call_command("migrate", "oapif_demo", "zero")
+
         self.stdout.write("Deleting migration files...")
         for file in migrations_path.glob("*.py"):
             if file.name != "__init__.py":

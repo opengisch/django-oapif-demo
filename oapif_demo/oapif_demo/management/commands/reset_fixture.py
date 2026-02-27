@@ -1,4 +1,3 @@
-
 import os
 import subprocess
 import sys
@@ -14,11 +13,11 @@ from django.db import transaction
 FILE_URL = "https://github.com/opengisch/QField/raw/refs/heads/master/resources/sample_projects/datasets/bees.gpkg"
 
 PG_CONN = (
-    f"PG:host={os.environ["POSTGRES_HOST"]} "
-    f"port={os.environ["POSTGRES_PORT"]} "
-    f"dbname={os.environ["POSTGRES_DB"]} "
-    f"user={os.environ["POSTGRES_USER"]} "
-    f"password={os.environ["POSTGRES_PASSWORD"]}"
+    f"PG:host={os.environ['POSTGRES_HOST']} "
+    f"port={os.environ['POSTGRES_PORT']} "
+    f"dbname={os.environ['POSTGRES_DB']} "
+    f"user={os.environ['POSTGRES_USER']} "
+    f"password={os.environ['POSTGRES_PASSWORD']}"
 )
 
 LAYERS = [
@@ -32,19 +31,20 @@ LAYERS = [
     },
     {
         "sql": "SELECT uuid, name, region, editor, geometry FROM tracks",
-        "table": "tracks",
+        "table": "track",
     },
     {
         "sql": "SELECT uuid, reviewer, review_date, CAST(apiary_uuid AS TEXT) AS apiary_id FROM reviews WHERE apiary_id != 60",
-        "table": "reviews",
-        "t_srs": None
+        "table": "review",
+        "t_srs": None,
     },
     {
         "sql": "SELECT uuid, percentage, CAST(apiary_uuid AS TEXT) AS apiary_id, CAST(field_uuid AS TEXT) AS area_id FROM Pollen_Consumption",
         "table": "pollenconsumption",
-        "t_srs": None
-    }
+        "t_srs": None,
+    },
 ]
+
 
 class Command(BaseCommand):
     help = "Delete all migrations for oapif_demo and re-run makemigrations + migrate"
@@ -57,7 +57,7 @@ class Command(BaseCommand):
             for model in apps.get_app_config("oapif_demo").get_models():
                 self.stdout.write(f"Clearing data from table '{model._meta.label}'...")
                 model.objects.all().delete()
-        
+
         tmp_dir = tempfile.TemporaryDirectory()
         file_path = Path(tmp_dir.name) / "bees.gpkg"
 
@@ -67,14 +67,18 @@ class Command(BaseCommand):
         for layer in LAYERS:
             cmd = [
                 "ogr2ogr",
-                "-f", "PostgreSQL",
+                "-f",
+                "PostgreSQL",
                 PG_CONN,
                 str(file_path),
-                "-sql", layer["sql"],
-                "-nln", f"oapif_demo_{layer["table"]}",
-                "-t_srs", "EPSG:4326",
+                "-sql",
+                layer["sql"],
+                "-nln",
+                f"oapif_demo_{layer['table']}",
+                "-t_srs",
+                "EPSG:4326",
                 "-append",
-                "-update"
+                "-update",
             ]
             print(f"Importing {layer['table']}...")
             try:

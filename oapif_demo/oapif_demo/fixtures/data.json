@@ -8,7 +8,7 @@
     "bee_amount": "100000",
     "beekeeper": "Galileo Galilei",
     "picture": "DCIM/1.jpg",
-    "disease": 1,
+    "disease": true,
     "kind_of_disease": null,
     "average_harvest": 50,
     "area": null,
@@ -33,7 +33,7 @@
     "bee_amount": "1000",
     "beekeeper": "Marie Curie",
     "picture": "DCIM/3.jpg",
-    "disease": 0,
+    "disease": false,
     "kind_of_disease": null,
     "average_harvest": 666,
     "area": null,
@@ -58,7 +58,7 @@
     "bee_amount": "1000",
     "beekeeper": "Al Idrisi",
     "picture": "DCIM/3.jpg",
-    "disease": 1,
+    "disease": true,
     "kind_of_disease": "EFB",
     "average_harvest": 6,
     "area": null,
@@ -83,7 +83,7 @@
     "bee_amount": "10000",
     "beekeeper": "Samantha Cristoforetti",
     "picture": "DCIM/4.jpg",
-    "disease": 0,
+    "disease": false,
     "kind_of_disease": null,
     "average_harvest": 200,
     "area": null,
@@ -108,7 +108,7 @@
     "bee_amount": "100000",
     "beekeeper": "Albert Einstein",
     "picture": "DCIM/2.jpg",
-    "disease": 0,
+    "disease": false,
     "kind_of_disease": null,
     "average_harvest": 100,
     "area": null,
@@ -133,7 +133,7 @@
     "bee_amount": "1000",
     "beekeeper": "Nicolau Copernicus",
     "picture": "DCIM/3.jpg",
-    "disease": 1,
+    "disease": true,
     "kind_of_disease": "AFB",
     "average_harvest": null,
     "area": null,
@@ -158,7 +158,7 @@
     "bee_amount": "1000",
     "beekeeper": "Ptolemy",
     "picture": "DCIM/3.jpg",
-    "disease": 0,
+    "disease": false,
     "kind_of_disease": null,
     "average_harvest": 9,
     "area": null,
@@ -183,7 +183,7 @@
     "bee_amount": "100000",
     "beekeeper": "Mae Jemison",
     "picture": "DCIM/3.jpg",
-    "disease": 1,
+    "disease": true,
     "kind_of_disease": "AFB",
     "average_harvest": 100,
     "area": null,
@@ -208,7 +208,7 @@
     "bee_amount": "1000",
     "beekeeper": "Isaac Newton",
     "picture": "DCIM/1.jpg",
-    "disease": 0,
+    "disease": false,
     "kind_of_disease": null,
     "average_harvest": 100,
     "area": null,
@@ -233,7 +233,7 @@
     "bee_amount": "1000",
     "beekeeper": "Stephen Hawking",
     "picture": "DCIM/3.jpg",
-    "disease": 0,
+    "disease": false,
     "kind_of_disease": null,
     "average_harvest": 10,
     "area": null,
@@ -258,7 +258,7 @@
     "bee_amount": "1000",
     "beekeeper": "Erasmus of Rotterdam",
     "picture": "DCIM/3.jpg",
-    "disease": 0,
+    "disease": false,
     "kind_of_disease": null,
     "average_harvest": null,
     "area": null,
@@ -283,7 +283,7 @@
     "bee_amount": "100000",
     "beekeeper": "Elizabeth Blackburn",
     "picture": "DCIM/2.jpg",
-    "disease": 0,
+    "disease": false,
     "kind_of_disease": null,
     "average_harvest": 100,
     "area": null,
@@ -308,7 +308,7 @@
     "bee_amount": "100000",
     "beekeeper": "Gerardus Mercator",
     "picture": "DCIM/2.jpg",
-    "disease": 0,
+    "disease": false,
     "kind_of_disease": null,
     "average_harvest": 67,
     "area": null,
@@ -333,7 +333,7 @@
     "bee_amount": "1000",
     "beekeeper": "Sheldon Cooper",
     "picture": "DCIM/4.jpg",
-    "disease": 0,
+    "disease": false,
     "kind_of_disease": null,
     "average_harvest": 2,
     "area": null,
@@ -358,7 +358,7 @@
     "bee_amount": "1000",
     "beekeeper": "Marco Bernasocchi",
     "picture": "DCIM/2.jpg",
-    "disease": 0,
+    "disease": false,
     "kind_of_disease": null,
     "average_harvest": null,
     "area": null,
@@ -383,7 +383,7 @@
     "bee_amount": "1000",
     "beekeeper": "Mac Moneysack",
     "picture": "DCIM/3.jpg",
-    "disease": 1,
+    "disease": true,
     "kind_of_disease": "EFB",
     "average_harvest": 20,
     "area": null,
@@ -408,7 +408,7 @@
     "bee_amount": "10000",
     "beekeeper": "Al Idrisi",
     "picture": "DCIM/4.jpg",
-    "disease": 0,
+    "disease": false,
     "kind_of_disease": null,
     "average_harvest": 568,
     "area": null,
@@ -433,7 +433,7 @@
     "bee_amount": "100000",
     "beekeeper": "Elizabeth Blackburn",
     "picture": "DCIM/4.jpg",
-    "disease": 1,
+    "disease": true,
     "kind_of_disease": "EFB",
     "average_harvest": 100,
     "area": null,
@@ -458,7 +458,7 @@
     "bee_amount": "100000",
     "beekeeper": "Denis Rouzaud",
     "picture": "DCIM/4.jpg",
-    "disease": 1,
+    "disease": true,
     "kind_of_disease": "EFB",
     "average_harvest": 100,
     "area": null,
@@ -483,7 +483,7 @@
     "bee_amount": "1000",
     "beekeeper": "Sheldon Cooper",
     "picture": "DCIM/2.jpg",
-    "disease": 0,
+    "disease": false,
     "kind_of_disease": null,
     "average_harvest": null,
     "area": null,
@@ -508,7 +508,7 @@
     "bee_amount": "100000",
     "beekeeper": "Ptolemy",
     "picture": "DCIM/2.jpg",
-    "disease": 0,
+    "disease": false,
     "kind_of_disease": null,
     "average_harvest": 99,
     "area": null,
@@ -533,7 +533,7 @@
     "bee_amount": "1000",
     "beekeeper": "Isaac Newton",
     "picture": "DCIM/1.jpg",
-    "disease": 0,
+    "disease": false,
     "kind_of_disease": null,
     "average_harvest": 100,
     "area": null,
@@ -558,7 +558,7 @@
     "bee_amount": "10000",
     "beekeeper": "Matthias Kuhn",
     "picture": "DCIM/2.jpg",
-    "disease": 1,
+    "disease": true,
     "kind_of_disease": "EFB",
     "average_harvest": null,
     "area": null,
@@ -583,7 +583,7 @@
     "bee_amount": "10000",
     "beekeeper": "Samantha Cristoforetti",
     "picture": "DCIM/3.jpg",
-    "disease": 0,
+    "disease": false,
     "kind_of_disease": null,
     "average_harvest": 369,
     "area": null,
@@ -608,7 +608,7 @@
     "bee_amount": "100000",
     "beekeeper": "Mario Baranzini",
     "picture": "DCIM/3.jpg",
-    "disease": 0,
+    "disease": false,
     "kind_of_disease": null,
     "average_harvest": null,
     "area": null,
@@ -633,7 +633,7 @@
     "bee_amount": "1000",
     "beekeeper": "Mae Jemison",
     "picture": "DCIM/4.jpg",
-    "disease": 0,
+    "disease": false,
     "kind_of_disease": null,
     "average_harvest": 12,
     "area": null,
@@ -658,7 +658,7 @@
     "bee_amount": "1000",
     "beekeeper": "Erasmus of Rotterdam",
     "picture": "DCIM/2.jpg",
-    "disease": 0,
+    "disease": false,
     "kind_of_disease": null,
     "average_harvest": 45,
     "area": null,
@@ -683,7 +683,7 @@
     "bee_amount": "1000",
     "beekeeper": "Nicolau Copernicus",
     "picture": "DCIM/3.jpg",
-    "disease": 0,
+    "disease": false,
     "kind_of_disease": null,
     "average_harvest": null,
     "area": null,
@@ -708,7 +708,7 @@
     "bee_amount": "1000",
     "beekeeper": "Rita Levi Montalcini",
     "picture": "DCIM/2.jpg",
-    "disease": 0,
+    "disease": false,
     "kind_of_disease": null,
     "average_harvest": 20,
     "area": null,
@@ -733,7 +733,7 @@
     "bee_amount": "1000",
     "beekeeper": "Marie Curie",
     "picture": "DCIM/3.jpg",
-    "disease": 0,
+    "disease": false,
     "kind_of_disease": null,
     "average_harvest": 9,
     "area": null,
@@ -758,7 +758,7 @@
     "bee_amount": "1000",
     "beekeeper": "Albert Einstein",
     "picture": "DCIM/1.jpg",
-    "disease": 0,
+    "disease": false,
     "kind_of_disease": null,
     "average_harvest": null,
     "area": null,
@@ -783,7 +783,7 @@
     "bee_amount": "10000",
     "beekeeper": "Stephen Hawking",
     "picture": "DCIM/4.jpg",
-    "disease": 0,
+    "disease": false,
     "kind_of_disease": null,
     "average_harvest": 10,
     "area": null,
@@ -808,7 +808,7 @@
     "bee_amount": "100000",
     "beekeeper": "Rita Levi Montalcini",
     "picture": "DCIM/4.jpg",
-    "disease": 1,
+    "disease": true,
     "kind_of_disease": "EFB",
     "average_harvest": 20,
     "area": null,
@@ -833,7 +833,7 @@
     "bee_amount": "100000",
     "beekeeper": "Gerardus Mercator",
     "picture": "DCIM/3.jpg",
-    "disease": 1,
+    "disease": true,
     "kind_of_disease": "AFB",
     "average_harvest": null,
     "area": null,
@@ -858,7 +858,7 @@
     "bee_amount": "10000",
     "beekeeper": "Galileo Galilei",
     "picture": "DCIM/1.jpg",
-    "disease": 0,
+    "disease": false,
     "kind_of_disease": null,
     "average_harvest": 369,
     "area": null,
@@ -1091,7 +1091,7 @@
   }
 },
 {
-  "model": "oapif_demo.tracks",
+  "model": "oapif_demo.track",
   "pk": "ffe7d709-9850-4f2b-b68c-2486ed4704fe",
   "fields": {
     "name": "Munt Sura",
@@ -1101,7 +1101,7 @@
   }
 },
 {
-  "model": "oapif_demo.reviews",
+  "model": "oapif_demo.review",
   "pk": "1d7b8c1d-354a-49f5-8f41-0f59cb208e15",
   "fields": {
     "reviewer": "Pete Penika ",
@@ -1110,7 +1110,7 @@
   }
 },
 {
-  "model": "oapif_demo.reviews",
+  "model": "oapif_demo.review",
   "pk": "2cb8dba5-4976-4c51-a23a-9b3ca24371a3",
   "fields": {
     "reviewer": "Maya Mielina",
@@ -1119,7 +1119,7 @@
   }
 },
 {
-  "model": "oapif_demo.reviews",
+  "model": "oapif_demo.review",
   "pk": "3a47f436-c6f6-4986-8fa5-084cc91d395b",
   "fields": {
     "reviewer": "Matteo Molino",
@@ -1128,7 +1128,7 @@
   }
 },
 {
-  "model": "oapif_demo.reviews",
+  "model": "oapif_demo.review",
   "pk": "6315771e-489d-4541-b5c1-61e635c705d1",
   "fields": {
     "reviewer": "Maya Mielina",
@@ -1137,7 +1137,7 @@
   }
 },
 {
-  "model": "oapif_demo.reviews",
+  "model": "oapif_demo.review",
   "pk": "6c2ea82a-3781-4087-b56b-90d32cd296d6",
   "fields": {
     "reviewer": "Linda Camathias",
@@ -1146,7 +1146,7 @@
   }
 },
 {
-  "model": "oapif_demo.reviews",
+  "model": "oapif_demo.review",
   "pk": "740f4de4-bce6-49ce-843f-87bcb76ed080",
   "fields": {
     "reviewer": "Mack Moneysck",
@@ -1155,7 +1155,7 @@
   }
 },
 {
-  "model": "oapif_demo.reviews",
+  "model": "oapif_demo.review",
   "pk": "7b015261-68e5-4b25-a528-f957dfb62784",
   "fields": {
     "reviewer": "Mario Baranzini",
@@ -1164,7 +1164,7 @@
   }
 },
 {
-  "model": "oapif_demo.reviews",
+  "model": "oapif_demo.review",
   "pk": "881c613d-49ea-4886-9133-96f1484dc620",
   "fields": {
     "reviewer": "Mack Moneysack ",
@@ -1173,7 +1173,7 @@
   }
 },
 {
-  "model": "oapif_demo.reviews",
+  "model": "oapif_demo.review",
   "pk": "9805e723-f7a1-4ed6-b026-4169f76fbf1c",
   "fields": {
     "reviewer": "Maya Mielina",
@@ -1182,7 +1182,7 @@
   }
 },
 {
-  "model": "oapif_demo.reviews",
+  "model": "oapif_demo.review",
   "pk": "a79d7873-7702-4bc4-b43e-e24a18bc3142",
   "fields": {
     "reviewer": "Linda Camathias ",
@@ -1191,7 +1191,7 @@
   }
 },
 {
-  "model": "oapif_demo.reviews",
+  "model": "oapif_demo.review",
   "pk": "b0076270-ad05-4c55-a509-0b010156b3ed",
   "fields": {
     "reviewer": "David Signer",
@@ -1200,7 +1200,7 @@
   }
 },
 {
-  "model": "oapif_demo.reviews",
+  "model": "oapif_demo.review",
   "pk": "b00a22f5-b0c3-411c-93ca-c29974f82d28",
   "fields": {
     "reviewer": "David Signer",
@@ -1209,7 +1209,7 @@
   }
 },
 {
-  "model": "oapif_demo.reviews",
+  "model": "oapif_demo.review",
   "pk": "ce695884-992d-4768-875d-0b1ac47a4192",
   "fields": {
     "reviewer": "Maya Mielina",

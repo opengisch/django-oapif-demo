@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 import os
 from pathlib import Path
 
+from django.templatetags.static import static
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,50 +28,55 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 DEBUG = os.environ.get("DJANGO_DEBUG", "0") in ["1", "True", "true"]
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", "django", os.getenv("CADDY_DOMAIN", "")]
-# SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
+    "oapif_demo",
+    "leaflet",
+    "unfold",
+    "unfold.contrib.filters",
+    "unfold.contrib.forms",
+    "unfold.contrib.inlines",
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
     "django.contrib.gis",
     "django_oapif",
-    "oapif_demo",
 ]
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django.middleware.security.SecurityMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = 'oapif_demo.urls'
+ROOT_URLCONF = "oapif_demo.urls"
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [BASE_DIR / "templates"],
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
             ],
         },
     },
 ]
 
-WSGI_APPLICATION = 'oapif_demo.wsgi.application'
+WSGI_APPLICATION = "oapif_demo.wsgi.application"
 
 
 # Database
@@ -87,7 +94,7 @@ DATABASES = {
     }
 }
 
-# Much faster for 
+# Much faster for
 PASSWORD_HASHERS = [
     "django.contrib.auth.hashers.Argon2PasswordHasher",
     "django.contrib.auth.hashers.PBKDF2PasswordHasher",
@@ -102,16 +109,16 @@ PASSWORD_HASHERS = [
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
 
@@ -119,9 +126,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/6.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = "UTC"
 
 USE_I18N = True
 
@@ -136,3 +143,60 @@ STATIC_ROOT = os.getenv("DJANGO_STATIC_ROOT", BASE_DIR.joinpath("static"))
 
 MEDIA_URL = "media/"
 MEDIA_ROOT = os.getenv("DJANGO_MEDIA_ROOT", BASE_DIR.joinpath("media"))
+
+UNFOLD = {
+    "SITE_TITLE": "Django OAPIF Demo",
+    "SITE_HEADER": "Django OAPIF Demo",
+    "SITE_URL": "/admin/",
+    "SITE_ICON": "https://i0.wp.com/www.opengis.ch/wp-content/uploads/2018/11/cropped-logo-round.png",
+    "SITE_FAVICONS": [
+        {
+            "rel": "icon",
+            "href": "https://i0.wp.com/www.opengis.ch/wp-content/uploads/2018/11/cropped-logo-round.png?fit=32%2C32",
+        },
+    ],
+    "STYLES": [
+        lambda _: static("/css/style.css"),
+    ],
+    "COLORS": {
+        "primary": {
+            "50": "241, 252, 228",
+            "100": "226, 247, 200",
+            "200": "199, 236, 148",
+            "300": "173, 224, 97",
+            "400": "151, 213, 64",
+            "500": "140, 208, 50",
+            "600": "130, 203, 42",
+            "700": "104, 162, 34",
+            "800": "78, 122, 25",
+            "900": "52, 81, 17",
+            "950": "26, 41, 8",
+        }
+    },
+}
+
+LEAFLET_CONFIG = {
+    "MIN_ZOOM": 7,
+    "SPATIAL_EXTENT": [
+        9.249582298993243,
+        46.8063278890749,
+        9.263861631092261,
+        46.81535825970133,
+    ],
+    "TILES": [
+        (
+            "SwissTopo",
+            "https://wmts.geo.admin.ch/1.0.0/ch.swisstopo.swisstlm3d-karte-grau/default/current/3857/{z}/{x}/{y}.png",
+            {
+                "detectRetina": True,
+            },
+        ),
+        (
+            "Satellite",
+            "https://wmts.geo.admin.ch/1.0.0/ch.swisstopo.swissimage/default/current/3857/{z}/{x}/{y}.jpeg",
+            {
+                "detectRetina": True,
+            },
+        ),
+    ],
+}

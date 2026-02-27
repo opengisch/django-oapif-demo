@@ -1,0 +1,6 @@
+#id_geom-map {
+    border-radius: var(--border-radius, 6px);
+    overflow: hidden;
+    width: var(--container-2xl);
+    z-index: 0;
+}
