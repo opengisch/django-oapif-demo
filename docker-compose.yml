@@ -20,6 +20,11 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8000/oapif/"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
     volumes:
       - static_volume:/static_volume
       - media_volume:/media_volume
