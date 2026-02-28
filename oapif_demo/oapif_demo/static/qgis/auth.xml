@@ -2,7 +2,7 @@
 <qgis_authentication>
   <configurations>
     <AuthMethodConfig version="2" uri="" name="django-oapif-demo" id="beesapi" method="Basic">
-      <Config password="123" realm="" username="admin"/>
+      <Config password="123" realm="" username="readwrite"/>
     </AuthMethodConfig>
   </configurations>
 </qgis_authentication>

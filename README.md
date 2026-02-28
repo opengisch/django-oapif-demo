@@ -8,7 +8,6 @@ docker compose --build up -d
 docker compose exec django python manage.py bootstrap
 ```
 
-
 2. Open QGIS
-3. Import `qgis/auth.xml` in Settings > Options > Authentication > Utilities > Import Authentication Configurations from File 
-4. Open project `qgis/bees.qgz`
+3. Import `oapif_demo/static/qgis/auth.xml` in Settings > Options > Authentication > Utilities > Import Authentication Configurations from File 
+4. Open project `oapif_demo/static/qgis/bees_dev.qgs`

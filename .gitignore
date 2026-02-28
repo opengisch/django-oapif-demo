@@ -11,4 +11,4 @@ wheels/
 # Virtual environments
 .venv
 
-bees.qgs~
+django-oapif-demo/oapif_demo/oapif_demo/static/qgis/bees.qgs

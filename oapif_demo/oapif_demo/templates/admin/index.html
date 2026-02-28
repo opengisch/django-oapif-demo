@@ -10,22 +10,19 @@
                 </caption>
                 <tbody>
                     <tr class="bg-white dark:bg-base-900 model-group">
-                        <th scope="row" class="font-normal p-3 text-left border-b border-base-100 dark:border-base-800">
+                        <th scope="row" class="font-normal p-3 text-left ">
                             <div class="flex items-center">
-                                <img src="https://raw.githubusercontent.com/qgis/QGIS/refs/heads/master/images/icons/qgis_qgs_icon.svg" class="pr-2" alt="QGIS Project" style="height: 1rem">
-                                <a href="#">
-                                    Download QGIS project
-                                </a>
+                                <span class="material-symbols-outlined pr-2">key</span>
+                                <a download="auth.xml" href="{% url 'download_qgs_auth' %}">Download authentication file</a>
+                                <span style="color: var(--color-base-500)">&nbsp(Import in Settings > Options > Authentication > Utilities > Import Authentication Configurations from File)</span>
                             </div>
                         </th>
                     </tr>
                     <tr class="bg-white dark:bg-base-900 model-group">
-                        <th scope="row" class="font-normal p-3 text-left ">
+                        <th scope="row" class="font-normal p-3 text-left border-b border-base-100 dark:border-base-800">
                             <div class="flex items-center">
-                                <span class="material-symbols-outlined pr-2">key</span>
-                                <a href="#">
-                                    Download authentication file
-                                </a>
+                                <img src="https://raw.githubusercontent.com/qgis/QGIS/refs/heads/master/images/icons/qgis_qgs_icon.svg" class="pr-2" alt="QGIS Project" style="height: 1rem">
+                                <a download href="{% static 'qgis/bees.qgs' %}">Download QGIS project</a>
                             </div>
                         </th>
                     </tr>
