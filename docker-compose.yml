@@ -7,6 +7,8 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - caddy_data:/data
+      - django_media:/django_media
+      - django_static:/django_static
     restart: unless-stopped
 
   django:
@@ -26,8 +28,8 @@ services:
       timeout: 5s
       retries: 5
     volumes:
-      - static_volume:/static_volume
-      - media_volume:/media_volume
+      - django_static:/django_static
+      - django_media:/django_media
     environment:
       DJANGO_DEBUG: ${DJANGO_DEBUG:?}
       DJANGO_SUPERUSER_EMAIL: ${DJANGO_SUPERUSER_EMAIL:?}
@@ -38,8 +40,8 @@ services:
       DJANGO_READONLY_USER_USERNAME: ${DJANGO_READONLY_USER_USERNAME:?}
       DJANGO_READONLY_USER_PASSWORD: ${DJANGO_READONLY_USER_PASSWORD:?}
       DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY:?}
-      DJANGO_STATIC_ROOT: /static_volume
-      DJANGO_MEDIA_ROOT: /media_volume
+      DJANGO_STATIC_ROOT: /django_static
+      DJANGO_MEDIA_ROOT: /django_media
       POSTGRES_USER: ${POSTGRES_USER:?}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?}
       POSTGRES_DB: ${POSTGRES_DB:?}
@@ -50,12 +52,12 @@ services:
     labels:
       caddy: ${CADDY_DOMAIN:?}
       caddy.reverse_proxy: "{{upstreams 8000}}"
-      caddy.handle_path: /static/*
-      caddy.handle_path.root: /static_volume
-      caddy.handle_path.file_server:
-      caddy.handle_path_1: /media/*
-      caddy.handle_path_1.root: /media_volume
-      caddy.handle_path_1.file_server:
+      caddy.0_handle_path: /media/*
+      caddy.0_handle_path.root: /django_media
+      caddy.0_handle_path.file_server:
+      caddy.1_handle_path: /static/*
+      caddy.1_handle_path.root: /django_static
+      caddy.1_handle_path.file_server:
     command: python3 manage.py runserver 0.0.0.0:8000
 
   postgres:
@@ -74,6 +76,6 @@ services:
 
 volumes:
   caddy_data:
-  static_volume:
-  media_volume:
+  django_static:
+  django_media:
   postgres_data:
