@@ -58,7 +58,7 @@ services:
       caddy.1_handle_path: /static/*
       caddy.1_handle_path.root: /django_static
       caddy.1_handle_path.file_server:
-    command: python3 manage.py runserver 0.0.0.0:8000
+    command: gunicorn oapif_demo.wsgi:application --bind 0.0.0.0:8000
 
   postgres:
     image: postgis/postgis:17-3.5

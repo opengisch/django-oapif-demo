@@ -10,4 +10,5 @@ dependencies = [
     "psycopg[binary]>=3.3.3",
     "django-unfold>=0.81.0",
     "django-leaflet>=0.33.0",
+    "gunicorn>=25.1.0",
 ]

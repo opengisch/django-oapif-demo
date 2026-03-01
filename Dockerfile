@@ -20,3 +20,6 @@ RUN pip install /usr/src/.[dev]
 COPY . /usr/src/
 
 WORKDIR /usr/src/oapif_demo
+
+RUN chmod +x /usr/src/entrypoint.sh
+ENTRYPOINT ["/usr/src/entrypoint.sh"]

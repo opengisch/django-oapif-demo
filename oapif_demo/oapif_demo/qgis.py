@@ -39,12 +39,12 @@ SERVER_PROTOCOL = "http" if settings.DEBUG else "https"
 
 
 def generate_qgs_project():
-    dev_qgs = Path("oapif_demo/static/qgis/bees_dev.qgs").read_text()
+    dev_qgs = Path(f"{settings.STATIC_ROOT}/qgis/bees_dev.qgs").read_text()
     qgs = dev_qgs.replace(
         "https://localhost/oapif",
         f"{SERVER_PROTOCOL}://{SERVER_DOMAIN}/oapif",
     )
-    Path("oapif_demo/static/qgis/bees.qgs").write_text(qgs)
+    Path(f"{settings.STATIC_ROOT}/qgis/bees.qgs").write_text(qgs)
 
 
 def dowload_qgs_auth(request):
