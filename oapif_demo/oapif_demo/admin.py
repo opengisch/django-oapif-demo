@@ -126,3 +126,21 @@ class TracksAdmin(ModelAdmin):
         "region",
         "editor",
     )
+
+
+@admin.register(Review)
+class ReviewAdmin(ModelAdmin):
+    fields = (
+        "reviewer",
+        "review_date",
+        "apiary",
+    )
+
+
+@admin.register(PollenConsumption)
+class PollenConsumption(ModelAdmin):
+    fields = (
+        "percentage",
+        "apiary",
+        "area",
+    )
