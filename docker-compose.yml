@@ -1,3 +1,37 @@
+x-django-service: &django-service
+  image: opengisch/django-oapif-demo:latest
+  build:
+    context: .
+    dockerfile: ./Dockerfile
+    cache_from:
+      - opengisch/django-oapif-demo:latest
+  restart: unless-stopped
+  depends_on:
+    postgres:
+      condition: service_healthy
+  volumes:
+    - django_static:/django_static
+    - django_media:/django_media
+  environment:
+    DJANGO_DEBUG: ${DJANGO_DEBUG:?}
+    DJANGO_SUPERUSER_EMAIL: ${DJANGO_SUPERUSER_EMAIL:?}
+    DJANGO_SUPERUSER_USERNAME: ${DJANGO_SUPERUSER_USERNAME:?}
+    DJANGO_SUPERUSER_PASSWORD: ${DJANGO_SUPERUSER_PASSWORD:?}
+    DJANGO_READWRITE_USER_USERNAME: ${DJANGO_READWRITE_USER_USERNAME:?}
+    DJANGO_READWRITE_USER_PASSWORD: ${DJANGO_READWRITE_USER_PASSWORD:?}
+    DJANGO_READONLY_USER_USERNAME: ${DJANGO_READONLY_USER_USERNAME:?}
+    DJANGO_READONLY_USER_PASSWORD: ${DJANGO_READONLY_USER_PASSWORD:?}
+    DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY:?}
+    DJANGO_STATIC_ROOT: /django_static
+    DJANGO_MEDIA_ROOT: /django_media
+    POSTGRES_USER: ${POSTGRES_USER:?}
+    POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?}
+    POSTGRES_DB: ${POSTGRES_DB:?}
+    POSTGRES_HOST: ${POSTGRES_HOST:?}
+    POSTGRES_PORT: ${POSTGRES_PORT:?}
+    POSTGRES_SSLMODE: ${POSTGRES_SSLMODE:?}
+    CADDY_DOMAIN: ${CADDY_DOMAIN:?}
+
 services:
   caddy:
     image: lucaslorentz/caddy-docker-proxy:ci-alpine
@@ -12,38 +46,8 @@ services:
     restart: unless-stopped
 
   django:
-    image: opengisch/django-oapif-demo:latest
-    build:
-      context: .
-      dockerfile: ./Dockerfile
-      cache_from:
-        - opengisch/django-oapif-demo:latest
-    restart: unless-stopped
-    depends_on:
-      postgres:
-        condition: service_healthy
-    volumes:
-      - django_static:/django_static
-      - django_media:/django_media
-    environment:
-      DJANGO_DEBUG: ${DJANGO_DEBUG:?}
-      DJANGO_SUPERUSER_EMAIL: ${DJANGO_SUPERUSER_EMAIL:?}
-      DJANGO_SUPERUSER_USERNAME: ${DJANGO_SUPERUSER_USERNAME:?}
-      DJANGO_SUPERUSER_PASSWORD: ${DJANGO_SUPERUSER_PASSWORD:?}
-      DJANGO_READWRITE_USER_USERNAME: ${DJANGO_READWRITE_USER_USERNAME:?}
-      DJANGO_READWRITE_USER_PASSWORD: ${DJANGO_READWRITE_USER_PASSWORD:?}
-      DJANGO_READONLY_USER_USERNAME: ${DJANGO_READONLY_USER_USERNAME:?}
-      DJANGO_READONLY_USER_PASSWORD: ${DJANGO_READONLY_USER_PASSWORD:?}
-      DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY:?}
-      DJANGO_STATIC_ROOT: /django_static
-      DJANGO_MEDIA_ROOT: /django_media
-      POSTGRES_USER: ${POSTGRES_USER:?}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?}
-      POSTGRES_DB: ${POSTGRES_DB:?}
-      POSTGRES_HOST: ${POSTGRES_HOST:?}
-      POSTGRES_PORT: ${POSTGRES_PORT:?}
-      POSTGRES_SSLMODE: ${POSTGRES_SSLMODE:?}
-      CADDY_DOMAIN: ${CADDY_DOMAIN:?}
+    <<: *django-service
+    command: gunicorn oapif_demo.wsgi:application --bind 0.0.0.0:8000
     labels:
       caddy: ${CADDY_DOMAIN:?}
       caddy.reverse_proxy: "{{upstreams 8000}}"
@@ -53,7 +57,11 @@ services:
       caddy.1_handle_path: /static/*
       caddy.1_handle_path.root: /django_static
       caddy.1_handle_path.file_server:
-    command: gunicorn oapif_demo.wsgi:application --bind 0.0.0.0:8000
+
+  django-bootstrap:
+    <<: *django-service
+    command: sh -c "while true; do python manage.py bootstrap; sleep 86400; done"
+    depends_on: [django]
 
   postgres:
     image: postgis/postgis:17-3.5

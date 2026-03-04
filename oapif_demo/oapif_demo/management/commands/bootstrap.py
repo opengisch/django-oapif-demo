@@ -12,10 +12,12 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
 
+        call_command("collectstatic", "--no-input")
+        call_command("generate_qgis_project")
         call_command("migrate", "--no-input")
         call_command("flush", "--no-input")
-        call_command("createsuperuser", "--no-input")
         call_command("loaddata", "data.json")
+        call_command("createsuperuser", "--no-input")
 
         readwrite_user = User.objects.create_user(
             username=os.getenv("DJANGO_READWRITE_USER_USERNAME"),
@@ -47,4 +49,5 @@ class Command(BaseCommand):
                 read_perm, add_perm, del_perm, change_perm
             )
 
+        readwrite_user.save()
         readonly_user.save()
