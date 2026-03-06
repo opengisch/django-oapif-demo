@@ -1,8 +1,178 @@
 {% extends "admin/index.html" %}
 {% load i18n static %}
 
+{% block extrahead %}
+<link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const AREA_COLOR = [
+            'match',
+            ['get', 'plant_species'],
+            'colza', '#d7191c',
+            'grass', '#f69053',
+            'lavender', '#daafc1',
+            'taraxacum', '#90c6a9',
+            'weed', '#90c6a9',
+            '#000000'
+        ];
+        const APIARY_COLOR = [
+            'match',
+            ['get', 'bee_species'],
+            'Apis Mellifera Mellifera', '#de7300',
+            'Apis Mellifera', '#2da4ff',
+            'Apis Mellifera Carnica', '#9d3796',
+            '#000000'
+        ];
+
+        const map = new maplibregl.Map({
+            container: "map",
+            zoom: 14,
+            center: [9.2572, 46.81],
+            style: {
+                version: 8,
+                glyphs: "https://vectortiles.geo.admin.ch/fonts/{fontstack}/{range}.pbf",
+                sprite: "https://vectortiles.geo.admin.ch/styles/ch.swisstopo.lightbasemap.vt/sprite/sprite",
+                sources: {
+                    swisstopo: {
+                        type: "raster",
+                        tiles: ["https://wmts.geo.admin.ch/1.0.0/ch.swisstopo.swisstlm3d-karte-grau/default/current/3857/{z}/{x}/{y}.png"],
+                        tileSize: 256
+                    },
+                    apiary: {
+                        type: 'geojson',
+                        data: 'https://localhost/oapif/collections/oapif_demo.apiary/items',
+                        cluster: true,
+                        clusterRadius: 10,
+                    },
+                    area: {
+                        type: 'geojson',
+                        data: 'https://localhost/oapif/collections/oapif_demo.area/items',
+                    },
+                },
+                layers: [
+                    {
+                        id: "swisstopo",
+                        type: "raster",
+                        source: "swisstopo",
+                        minzoom: 0,
+                        maxzoom: 19
+                    },
+                    {
+                        id: 'area-items',
+                        type: 'fill',
+                        source: 'area',
+                        paint: {
+                            'fill-color': AREA_COLOR,
+                            'fill-opacity': 0.6,
+                        }
+                    },
+                    {
+                        id: 'apiary-items',
+                        type: 'circle',
+                        source: 'apiary',
+                        paint: {
+                            'circle-radius': 6,
+                            'circle-color': APIARY_COLOR,
+                            'circle-stroke-width': 1,
+                            'circle-stroke-color': '#ffffff',
+                        }
+                    },
+                    {
+                        id: 'apiary-clusters',
+                        type: 'circle',
+                        source: 'apiary',
+                        filter: ['has', 'point_count'],
+                        paint: {
+                            'circle-color': '#80cc28',
+                            'circle-radius': 12,
+                        },
+                    },
+                    {
+                        id: 'apiary-clusters-labels',
+                        type: 'symbol',
+                        source: 'apiary',
+                        filter: ['has', 'point_count'],
+                        layout: {
+                            'text-field': ['get', 'point_count_abbreviated'],
+                            'text-font': ['Frutiger Neue Condensed Bold'],
+                            'text-size': 12,
+                        },
+                        paint: {
+                            'text-color': '#ffffff',
+                        },
+                    },
+                    {
+                        id: 'apiary-labels',
+                        type: 'symbol',
+                        source: 'apiary',
+                        filter: ['!', ['has', 'point_count']],
+                        layout: {
+                            'text-field': [
+                                'concat',
+                                ['to-string', ['/', ['get', 'bee_amount'], 1000]], 'k Bees (',
+                                ['to-string', ['get', 'nbr_of_boxes']], ' Boxes)'
+                            ],
+                            'text-font': ['Frutiger Neue Condensed Bold'],
+                            'text-size': 12,
+                            'text-anchor': 'left',
+                            'text-offset': [1.0, 0] // moves text to the right of the point
+                        },
+                        paint: {
+                            'text-color': APIARY_COLOR,
+                            'text-halo-color': '#ffffff',
+                            'text-halo-width': 1,
+                        }
+                    },
+                    {
+                        id: 'area-labels',
+                        type: 'symbol',
+                        source: 'area',
+                        layout: {
+                            'text-field': ['get', 'plant_species'],
+                            'text-font': ['Frutiger Neue Condensed Italic'],
+                            'text-size': 13,
+                            'text-anchor': 'center',
+                        },
+                        paint: {
+                            'text-color': AREA_COLOR,
+                            'text-halo-color': '#ffffff',
+                            'text-halo-width': 1,
+                        },
+                    }
+                ]
+            },
+        });
+
+        let selected_feature = undefined;
+        map.on('mousemove', (e) => {
+            // Query features under the mouse in your layers
+            const features = map.queryRenderedFeatures(e.point, {
+                layers: ['area-items', 'apiary-items', 'apiary-labels'],
+                filter: ['!', ['has', 'point_count']],
+            });
+            if (features.length > 0) {
+                map.getCanvas().style.cursor = 'pointer';
+                selected_feature = features[0];
+            } else {
+                map.getCanvas().style.cursor = '';
+                selected_feature = undefined;
+            }
+        });
+        map.on('click', (e) => {
+            if (selected_feature == undefined) return;
+            window.location.href = `/admin/oapif_demo/${selected_feature.layer.source}/${selected_feature.properties.uuid}`
+        });
+        map.addControl(new maplibregl.NavigationControl());
+    });
+</script>
+{% endblock %}
+
 {% block content %}
-    <div class="module border-b border-base-200 dark:border-base-800  mb-5">
+    <div class="module border-b border-base-200 dark:border-base-800 mb-5">
+        <div id="map" class="mb-6 rounded-default" style="width: 100%; height: min(50vh, 450px);"></div>
+    </div>
+    <div class="module border-b border-base-200 dark:border-base-800 mb-5">
         <div class="bg-base-50 mb-6 rounded-default p-3 dark:bg-base-800">
             <table class="border border-base-400/10 border-spacing-none border-separate rounded-default overflow-hidden shadow-xs w-full dark:border-base-800">
                 <caption class="font-semibold mb-3 text-base-900 text-left dark:text-base-100">

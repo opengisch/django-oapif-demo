@@ -5,7 +5,7 @@
   "fields": {
     "nbr_of_boxes": 5,
     "bee_species": "Apis Mellifera Carnica",
-    "bee_amount": "100000",
+    "bee_amount": 100000,
     "beekeeper": "Galileo Galilei",
     "picture": "DCIM/1.jpg",
     "disease": true,
@@ -30,7 +30,7 @@
   "fields": {
     "nbr_of_boxes": 3,
     "bee_species": "Apis Mellifera Carnica",
-    "bee_amount": "1000",
+    "bee_amount": 1000,
     "beekeeper": "Marie Curie",
     "picture": "DCIM/3.jpg",
     "disease": false,
@@ -55,7 +55,7 @@
   "fields": {
     "nbr_of_boxes": 10,
     "bee_species": "Apis Mellifera",
-    "bee_amount": "1000",
+    "bee_amount": 1000,
     "beekeeper": "Al Idrisi",
     "picture": "DCIM/3.jpg",
     "disease": true,
@@ -80,7 +80,7 @@
   "fields": {
     "nbr_of_boxes": 6,
     "bee_species": "Apis Mellifera Carnica",
-    "bee_amount": "10000",
+    "bee_amount": 10000,
     "beekeeper": "Samantha Cristoforetti",
     "picture": "DCIM/4.jpg",
     "disease": false,
@@ -105,7 +105,7 @@
   "fields": {
     "nbr_of_boxes": 5,
     "bee_species": "Apis Mellifera Mellifera",
-    "bee_amount": "100000",
+    "bee_amount": 100000,
     "beekeeper": "Albert Einstein",
     "picture": "DCIM/2.jpg",
     "disease": false,
@@ -130,7 +130,7 @@
   "fields": {
     "nbr_of_boxes": 3,
     "bee_species": "Apis Mellifera",
-    "bee_amount": "1000",
+    "bee_amount": 1000,
     "beekeeper": "Nicolau Copernicus",
     "picture": "DCIM/3.jpg",
     "disease": true,
@@ -155,7 +155,7 @@
   "fields": {
     "nbr_of_boxes": 3,
     "bee_species": "Apis Mellifera",
-    "bee_amount": "1000",
+    "bee_amount": 1000,
     "beekeeper": "Ptolemy",
     "picture": "DCIM/3.jpg",
     "disease": false,
@@ -180,7 +180,7 @@
   "fields": {
     "nbr_of_boxes": 10,
     "bee_species": "Apis Mellifera",
-    "bee_amount": "100000",
+    "bee_amount": 100000,
     "beekeeper": "Mae Jemison",
     "picture": "DCIM/3.jpg",
     "disease": true,
@@ -205,7 +205,7 @@
   "fields": {
     "nbr_of_boxes": 3,
     "bee_species": "Apis Mellifera Carnica",
-    "bee_amount": "1000",
+    "bee_amount": 1000,
     "beekeeper": "Isaac Newton",
     "picture": "DCIM/1.jpg",
     "disease": false,
@@ -230,7 +230,7 @@
   "fields": {
     "nbr_of_boxes": 7,
     "bee_species": "Apis Mellifera Carnica",
-    "bee_amount": "1000",
+    "bee_amount": 1000,
     "beekeeper": "Stephen Hawking",
     "picture": "DCIM/3.jpg",
     "disease": false,
@@ -255,7 +255,7 @@
   "fields": {
     "nbr_of_boxes": 10,
     "bee_species": "Apis Mellifera Carnica",
-    "bee_amount": "1000",
+    "bee_amount": 1000,
     "beekeeper": "Erasmus of Rotterdam",
     "picture": "DCIM/3.jpg",
     "disease": false,
@@ -280,7 +280,7 @@
   "fields": {
     "nbr_of_boxes": 4,
     "bee_species": "Apis Mellifera",
-    "bee_amount": "100000",
+    "bee_amount": 100000,
     "beekeeper": "Elizabeth Blackburn",
     "picture": "DCIM/2.jpg",
     "disease": false,
@@ -305,7 +305,7 @@
   "fields": {
     "nbr_of_boxes": 6,
     "bee_species": "Apis Mellifera Carnica",
-    "bee_amount": "100000",
+    "bee_amount": 100000,
     "beekeeper": "Gerardus Mercator",
     "picture": "DCIM/2.jpg",
     "disease": false,
@@ -330,7 +330,7 @@
   "fields": {
     "nbr_of_boxes": 2,
     "bee_species": "Apis Mellifera Mellifera",
-    "bee_amount": "1000",
+    "bee_amount": 1000,
     "beekeeper": "Sheldon Cooper",
     "picture": "DCIM/4.jpg",
     "disease": false,
@@ -355,7 +355,7 @@
   "fields": {
     "nbr_of_boxes": 2,
     "bee_species": "Apis Mellifera Mellifera",
-    "bee_amount": "1000",
+    "bee_amount": 1000,
     "beekeeper": "Marco Bernasocchi",
     "picture": "DCIM/2.jpg",
     "disease": false,
@@ -380,7 +380,7 @@
   "fields": {
     "nbr_of_boxes": 5,
     "bee_species": "Apis Mellifera Carnica",
-    "bee_amount": "1000",
+    "bee_amount": 1000,
     "beekeeper": "Mac Moneysack",
     "picture": "DCIM/3.jpg",
     "disease": true,
@@ -405,7 +405,7 @@
   "fields": {
     "nbr_of_boxes": 10,
     "bee_species": "Apis Mellifera Carnica",
-    "bee_amount": "10000",
+    "bee_amount": 10000,
     "beekeeper": "Al Idrisi",
     "picture": "DCIM/4.jpg",
     "disease": false,
@@ -430,7 +430,7 @@
   "fields": {
     "nbr_of_boxes": 10,
     "bee_species": "Apis Mellifera",
-    "bee_amount": "100000",
+    "bee_amount": 100000,
     "beekeeper": "Elizabeth Blackburn",
     "picture": "DCIM/4.jpg",
     "disease": true,
@@ -455,7 +455,7 @@
   "fields": {
     "nbr_of_boxes": 6,
     "bee_species": "Apis Mellifera Carnica",
-    "bee_amount": "100000",
+    "bee_amount": 100000,
     "beekeeper": "Denis Rouzaud",
     "picture": "DCIM/4.jpg",
     "disease": true,
@@ -480,7 +480,7 @@
   "fields": {
     "nbr_of_boxes": 3,
     "bee_species": "Apis Mellifera Mellifera",
-    "bee_amount": "1000",
+    "bee_amount": 1000,
     "beekeeper": "Sheldon Cooper",
     "picture": "DCIM/2.jpg",
     "disease": false,
@@ -505,7 +505,7 @@
   "fields": {
     "nbr_of_boxes": 8,
     "bee_species": "Apis Mellifera Carnica",
-    "bee_amount": "100000",
+    "bee_amount": 100000,
     "beekeeper": "Ptolemy",
     "picture": "DCIM/2.jpg",
     "disease": false,
@@ -530,7 +530,7 @@
   "fields": {
     "nbr_of_boxes": 5,
     "bee_species": "Apis Mellifera Carnica",
-    "bee_amount": "1000",
+    "bee_amount": 1000,
     "beekeeper": "Isaac Newton",
     "picture": "DCIM/1.jpg",
     "disease": false,
@@ -555,7 +555,7 @@
   "fields": {
     "nbr_of_boxes": 5,
     "bee_species": "Apis Mellifera Mellifera",
-    "bee_amount": "10000",
+    "bee_amount": 10000,
     "beekeeper": "Matthias Kuhn",
     "picture": "DCIM/2.jpg",
     "disease": true,
@@ -580,7 +580,7 @@
   "fields": {
     "nbr_of_boxes": 3,
     "bee_species": "Apis Mellifera",
-    "bee_amount": "10000",
+    "bee_amount": 10000,
     "beekeeper": "Samantha Cristoforetti",
     "picture": "DCIM/3.jpg",
     "disease": false,
@@ -605,7 +605,7 @@
   "fields": {
     "nbr_of_boxes": 6,
     "bee_species": "Apis Mellifera Carnica",
-    "bee_amount": "100000",
+    "bee_amount": 100000,
     "beekeeper": "Mario Baranzini",
     "picture": "DCIM/3.jpg",
     "disease": false,
@@ -630,7 +630,7 @@
   "fields": {
     "nbr_of_boxes": 5,
     "bee_species": "Apis Mellifera",
-    "bee_amount": "1000",
+    "bee_amount": 1000,
     "beekeeper": "Mae Jemison",
     "picture": "DCIM/4.jpg",
     "disease": false,
@@ -655,7 +655,7 @@
   "fields": {
     "nbr_of_boxes": 1,
     "bee_species": "Apis Mellifera Mellifera",
-    "bee_amount": "1000",
+    "bee_amount": 1000,
     "beekeeper": "Erasmus of Rotterdam",
     "picture": "DCIM/2.jpg",
     "disease": false,
@@ -680,7 +680,7 @@
   "fields": {
     "nbr_of_boxes": 3,
     "bee_species": "Apis Mellifera Carnica",
-    "bee_amount": "1000",
+    "bee_amount": 1000,
     "beekeeper": "Nicolau Copernicus",
     "picture": "DCIM/3.jpg",
     "disease": false,
@@ -705,7 +705,7 @@
   "fields": {
     "nbr_of_boxes": 10,
     "bee_species": "Apis Mellifera Carnica",
-    "bee_amount": "1000",
+    "bee_amount": 1000,
     "beekeeper": "Rita Levi Montalcini",
     "picture": "DCIM/2.jpg",
     "disease": false,
@@ -730,7 +730,7 @@
   "fields": {
     "nbr_of_boxes": 3,
     "bee_species": "Apis Mellifera",
-    "bee_amount": "1000",
+    "bee_amount": 1000,
     "beekeeper": "Marie Curie",
     "picture": "DCIM/3.jpg",
     "disease": false,
@@ -755,7 +755,7 @@
   "fields": {
     "nbr_of_boxes": 3,
     "bee_species": "Apis Mellifera Carnica",
-    "bee_amount": "1000",
+    "bee_amount": 1000,
     "beekeeper": "Albert Einstein",
     "picture": "DCIM/1.jpg",
     "disease": false,
@@ -780,7 +780,7 @@
   "fields": {
     "nbr_of_boxes": 4,
     "bee_species": "Apis Mellifera",
-    "bee_amount": "10000",
+    "bee_amount": 10000,
     "beekeeper": "Stephen Hawking",
     "picture": "DCIM/4.jpg",
     "disease": false,
@@ -805,7 +805,7 @@
   "fields": {
     "nbr_of_boxes": 10,
     "bee_species": "Apis Mellifera",
-    "bee_amount": "100000",
+    "bee_amount": 100000,
     "beekeeper": "Rita Levi Montalcini",
     "picture": "DCIM/4.jpg",
     "disease": true,
@@ -830,7 +830,7 @@
   "fields": {
     "nbr_of_boxes": 6,
     "bee_species": "Apis Mellifera Carnica",
-    "bee_amount": "100000",
+    "bee_amount": 100000,
     "beekeeper": "Gerardus Mercator",
     "picture": "DCIM/3.jpg",
     "disease": true,
@@ -855,7 +855,7 @@
   "fields": {
     "nbr_of_boxes": 3,
     "bee_species": "Apis Mellifera",
-    "bee_amount": "10000",
+    "bee_amount": 10000,
     "beekeeper": "Galileo Galilei",
     "picture": "DCIM/1.jpg",
     "disease": false,

@@ -22,7 +22,7 @@ PG_CONN = (
 
 LAYERS = [
     {
-        "sql": "SELECT uuid, nbr_of_boxes, bee_species, bee_amount, beekeeper, CASE WHEN picture != '' THEN picture END AS picture, disease, kind_of_disease, average_harvest, source, quality, x, y, z, horizontal_accuracy, nr_used_satellites, fix_status_descr, position_locked, geom FROM apiary",
+        "sql": "SELECT uuid, nbr_of_boxes, bee_species, CAST(bee_amount AS INT) AS bee_amount, beekeeper, CASE WHEN picture != '' THEN picture END AS picture, disease, kind_of_disease, average_harvest, source, quality, x, y, z, horizontal_accuracy, nr_used_satellites, fix_status_descr, position_locked, geom FROM apiary",
         "table": "apiary",
     },
     {

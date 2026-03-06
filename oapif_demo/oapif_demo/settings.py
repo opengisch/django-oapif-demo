@@ -177,12 +177,8 @@ UNFOLD = {
 
 LEAFLET_CONFIG = {
     "MIN_ZOOM": 7,
-    "SPATIAL_EXTENT": [
-        9.249582298993243,
-        46.8063278890749,
-        9.263861631092261,
-        46.81535825970133,
-    ],
+    "DEFAULT_CENTER": (46.81, 9.2572),
+    "DEFAULT_ZOOM": 15,
     "TILES": [
         (
             "SwissTopo",

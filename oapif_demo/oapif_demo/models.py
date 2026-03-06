@@ -8,7 +8,7 @@ class Apiary(models.Model):
     uuid = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     nbr_of_boxes = models.IntegerField(verbose_name="Number of Boxes")
     bee_species = models.CharField(max_length=None, verbose_name="Species of Bees")
-    bee_amount = models.CharField(max_length=None, verbose_name="Amount of Bees")
+    bee_amount = models.IntegerField(verbose_name="Amount of Bees")
     beekeeper = models.CharField(max_length=None, verbose_name="Beekeeper")
     picture = models.ImageField(
         max_length=None, null=True, blank=True, upload_to="DCIM", verbose_name="Photo"
