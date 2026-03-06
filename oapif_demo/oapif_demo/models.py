@@ -10,7 +10,9 @@ class Apiary(models.Model):
     bee_species = models.CharField(max_length=None, verbose_name="Species of Bees")
     bee_amount = models.CharField(max_length=None, verbose_name="Amount of Bees")
     beekeeper = models.CharField(max_length=None, verbose_name="Beekeeper")
-    picture = models.CharField(max_length=None, verbose_name="Photo")
+    picture = models.ImageField(
+        max_length=None, null=True, blank=True, upload_to="DCIM", verbose_name="Photo"
+    )
     disease = models.BooleanField(verbose_name="Infected")
     kind_of_disease = models.CharField(max_length=None, null=True, blank=True)
     average_harvest = models.IntegerField(null=True, verbose_name="Yearly Harvest (kg)")

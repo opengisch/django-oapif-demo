@@ -14,7 +14,7 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         dev_qgs = Path(f"{settings.STATIC_ROOT}/qgis/bees_dev.qgs").read_text()
         qgs = dev_qgs.replace(
-            "https://localhost/oapif",
-            f"{SERVER_PROTOCOL}://{SERVER_DOMAIN}/oapif",
+            "https://localhost",
+            f"{SERVER_PROTOCOL}://{SERVER_DOMAIN}",
         )
         Path(f"{settings.STATIC_ROOT}/qgis/bees.qgs").write_text(qgs)

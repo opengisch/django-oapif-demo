@@ -12,3 +12,5 @@ wheels/
 .venv
 
 oapif_demo/oapif_demo/static/qgis/bees.qgs
+oapif_demo/oapif_demo/static/qgis/bees_dev.qgs~
+oapif_demo/oapif_demo/static/qgis/bees_dev_attachments.zip

@@ -1,5 +1,8 @@
 import os
+from pathlib import Path
+from urllib.request import urlretrieve
 
+from django.conf import settings
 from django.contrib.auth.models import Permission, User
 from django.contrib.contenttypes.models import ContentType
 from django.core.management import call_command
@@ -18,6 +21,14 @@ class Command(BaseCommand):
         call_command("flush", "--no-input")
         call_command("loaddata", "data.json")
         call_command("createsuperuser", "--no-input")
+
+        Path(settings.MEDIA_ROOT).mkdir(parents=True, exist_ok=True)
+        for picture in Apiary.objects.values_list("picture", flat=True).distinct():
+            url = f"https://raw.githubusercontent.com/opengisch/QField/refs/heads/master/resources/sample_projects/{picture}"
+            path = f"{settings.MEDIA_ROOT}/{picture}"
+            Path(path).parent.mkdir(parents=True, exist_ok=True)
+            print(f"Downloading {url}...")
+            urlretrieve(url, path)
 
         readwrite_user = User.objects.create_user(
             username=os.getenv("DJANGO_READWRITE_USER_USERNAME"),
