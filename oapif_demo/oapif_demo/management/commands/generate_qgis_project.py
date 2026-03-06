@@ -5,7 +5,6 @@ from django.conf import settings
 from django.core.management.base import BaseCommand
 
 SERVER_DOMAIN = os.getenv("CADDY_DOMAIN")
-SERVER_PROTOCOL = "http" if settings.DEBUG else "https"
 
 
 class Command(BaseCommand):
@@ -15,6 +14,6 @@ class Command(BaseCommand):
         dev_qgs = Path(f"{settings.STATIC_ROOT}/qgis/bees_dev.qgs").read_text()
         qgs = dev_qgs.replace(
             "https://localhost",
-            f"{SERVER_PROTOCOL}://{SERVER_DOMAIN}",
+            f"https://{SERVER_DOMAIN}",
         )
         Path(f"{settings.STATIC_ROOT}/qgis/bees.qgs").write_text(qgs)
