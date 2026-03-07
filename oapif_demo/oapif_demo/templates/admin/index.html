@@ -2,8 +2,8 @@
 {% load i18n static %}
 
 {% block extrahead %}
-<link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
-<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<link href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css" rel="stylesheet" />
+<script src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         const AREA_COLOR = [
@@ -29,26 +29,39 @@
             container: "map",
             zoom: 14,
             center: [9.2572, 46.81],
+            pitch: 60,
+            bearing: 20,
             style: {
                 version: 8,
                 glyphs: "https://vectortiles.geo.admin.ch/fonts/{fontstack}/{range}.pbf",
-                sprite: "https://vectortiles.geo.admin.ch/styles/ch.swisstopo.lightbasemap.vt/sprite/sprite",
                 sources: {
+                    terrain: {
+                        type: 'raster-dem',
+                        tiles: ['https://tiles.mapterhorn.com/{z}/{x}/{y}.webp'],
+                        encoding: 'terrarium',
+                        tileSize: 512,
+                        attribution: '<a href="https://mapterhorn.com/attribution">© Mapterhorn</a>'
+                    },
                     swisstopo: {
                         type: "raster",
                         tiles: ["https://wmts.geo.admin.ch/1.0.0/ch.swisstopo.swisstlm3d-karte-grau/default/current/3857/{z}/{x}/{y}.png"],
-                        tileSize: 256
+                        tileSize: 256,
+                        attribution: "<a href='https://www.swisstopo.admin.ch'>Swisstopo</a>"
                     },
                     apiary: {
                         type: 'geojson',
                         data: '/oapif/collections/oapif_demo.apiary/items',
                         cluster: true,
-                        clusterRadius: 10,
+                        clusterRadius: 12,
                     },
                     area: {
                         type: 'geojson',
                         data: '/oapif/collections/oapif_demo.area/items',
                     },
+                },
+                terrain: {
+                    source: 'terrain',
+                    exaggeration: 1
                 },
                 layers: [
                     {
@@ -97,6 +110,8 @@
                             'text-field': ['get', 'point_count_abbreviated'],
                             'text-font': ['Frutiger Neue Condensed Bold'],
                             'text-size': 12,
+                            'text-allow-overlap': true,
+                            'text-ignore-placement': true,
                         },
                         paint: {
                             'text-color': '#ffffff',
@@ -116,7 +131,7 @@
                             'text-font': ['Frutiger Neue Condensed Bold'],
                             'text-size': 12,
                             'text-anchor': 'left',
-                            'text-offset': [1.0, 0] // moves text to the right of the point
+                            'text-offset': [1.0, 0]
                         },
                         paint: {
                             'text-color': APIARY_COLOR,
@@ -143,10 +158,11 @@
                 ]
             },
         });
+        map.addControl(new maplibregl.NavigationControl());
+        map.addControl(new maplibregl.TerrainControl({source: 'terrain', exaggeration: 1}));
 
         let selected_feature = undefined;
         map.on('mousemove', (e) => {
-            // Query features under the mouse in your layers
             const features = map.queryRenderedFeatures(e.point, {
                 layers: ['area-items', 'apiary-items', 'apiary-labels'],
                 filter: ['!', ['has', 'point_count']],
@@ -163,14 +179,38 @@
             if (selected_feature == undefined) return;
             window.location.href = `/admin/oapif_demo/${selected_feature.layer.source}/${selected_feature.properties.uuid}`
         });
-        map.addControl(new maplibregl.NavigationControl());
+        map.once('idle', (e) => {
+            document.getElementById('map').classList.remove('loading');
+            map.triggerRepaint();
+        })
     });
 </script>
+<style>
+    #map.loading {
+        pointer-events: none;
+    }
+    #map.loading .maplibregl-canvas-container {
+        opacity: 0%;
+    }
+    #map .maplibregl-canvas-container {
+        transition: opacity .4s;
+        opacity: 100%;
+    }
+    #loading {
+        font-size: 4rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
 {% endblock %}
 
 {% block content %}
     <div class="module border-b border-base-200 dark:border-base-800 mb-5">
-        <div id="map" class="mb-6 rounded-default" style="width: 100%; height: min(50vh, 450px);"></div>
+        <div id="map-container" class="bg-base-50 dark:bg-base-800 mb-6 rounded-default overflow-hidden w-full relative" style="height: min(50vh, 450px);">
+            <span id="loading" class="absolute ml-auto material-symbols-outlined text-base-300 dark:text-base-600">map</span>
+            <div id="map" class="loading w-full h-full"></div>
+        </div>
     </div>
     <div class="module border-b border-base-200 dark:border-base-800 mb-5">
         <div class="bg-base-50 mb-6 rounded-default p-3 dark:bg-base-800">
