@@ -17,11 +17,13 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
+from django.views.generic.base import RedirectView
 
 from .oapif import oapif
 from .qgis import dowload_qgs_auth
 
 urlpatterns = [
+    path("", RedirectView.as_view(url="/admin/", permanent=False)),
     path("admin/", admin.site.urls),
     path("oapif/", oapif.urls),
     path("download-qgs-auth", dowload_qgs_auth, name="download_qgs_auth"),
