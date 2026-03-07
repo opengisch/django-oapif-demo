@@ -1,0 +1,37 @@
+{% extends "admin/login.html" %}
+{% load i18n static %}
+
+{% block login_after %}
+<div class="bg-base-50 mt-6 rounded-default p-3 dark:bg-base-800">
+  <table class="border border-base-400/10 border-spacing-none border-separate rounded-default overflow-hidden shadow-xs w-full dark:border-base-800">
+    <caption class="font-semibold mb-3 text-base-900 text-left dark:text-base-100">
+      Demo users
+    </caption>
+
+    <thead>
+      <tr class="bg-white dark:bg-base-900">
+        <th class="p-3 text-left border-b border-base-100 dark:border-base-800">Username</th>
+        <th class="p-3 text-left border-b border-base-100 dark:border-base-800">Password</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="bg-white dark:bg-base-900">
+        <td class="font-normal p-3 text-left border-b border-base-100 dark:border-base-800">
+          readwrite
+        </td>
+        <td class="font-normal p-3 text-left border-b border-base-100 dark:border-base-800">
+          123
+        </td>
+      </tr>
+      <tr class="bg-white dark:bg-base-900">
+        <td class="font-normal p-3 text-left">
+          readonly
+        </td>
+        <td class="font-normal p-3 text-left">
+          123
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+{% endblock %}
