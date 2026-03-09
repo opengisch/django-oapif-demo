@@ -1,6 +1,8 @@
+import io
 import os
+import zipfile
 from pathlib import Path
-from urllib.request import urlretrieve
+from urllib.request import urlopen
 
 from django.conf import settings
 from django.contrib.auth.models import Permission, User
@@ -22,13 +24,12 @@ class Command(BaseCommand):
         call_command("loaddata", "data.json")
         call_command("createsuperuser", "--no-input")
 
-        Path(settings.MEDIA_ROOT).mkdir(parents=True, exist_ok=True)
-        for picture in Apiary.objects.values_list("picture", flat=True).distinct():
-            url = f"https://raw.githubusercontent.com/opengisch/QField/refs/heads/master/resources/sample_projects/{picture}"
-            path = f"{settings.MEDIA_ROOT}/{picture}"
-            Path(path).parent.mkdir(parents=True, exist_ok=True)
-            print(f"Downloading {url}...")
-            urlretrieve(url, path)
+        pictures = set(Apiary.objects.values_list("picture", flat=True).distinct())
+        print("Downloading project data...")
+        with urlopen("http://qfield.org/sample-projects/bees.zip") as res:
+            with zipfile.ZipFile(io.BytesIO(res.read())) as z:
+                members = (m for m in z.namelist() if m in pictures)
+                z.extractall(Path(settings.MEDIA_ROOT), members)
 
         readwrite_user = User.objects.create_user(
             username=os.getenv("DJANGO_READWRITE_USER_USERNAME"),

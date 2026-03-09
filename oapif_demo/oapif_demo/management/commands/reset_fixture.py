@@ -1,9 +1,11 @@
+import io
 import os
 import subprocess
 import sys
 import tempfile
+import zipfile
 from pathlib import Path
-from urllib.request import urlretrieve
+from urllib.request import urlopen
 
 from django.apps import apps
 from django.core.management import call_command
@@ -58,11 +60,12 @@ class Command(BaseCommand):
                 self.stdout.write(f"Clearing data from table '{model._meta.label}'...")
                 model.objects.all().delete()
 
-        tmp_dir = tempfile.TemporaryDirectory()
-        file_path = Path(tmp_dir.name) / "bees.gpkg"
+        tmp_dir = Path(tempfile.TemporaryDirectory().name)
 
-        print(f"Downloading {file_path}...")
-        urlretrieve(FILE_URL, file_path)
+        print("Downloading project data...")
+        with urlopen("http://qfield.org/sample-projects/bees.zip") as res:
+            with zipfile.ZipFile(io.BytesIO(res.read())) as z:
+                z.extractall(tmp_dir)
 
         for layer in LAYERS:
             cmd = [
@@ -70,7 +73,7 @@ class Command(BaseCommand):
                 "-f",
                 "PostgreSQL",
                 PG_CONN,
-                str(file_path),
+                tmp_dir / "datasets" / "bees.gpkg",
                 "-sql",
                 layer["sql"],
                 "-nln",
