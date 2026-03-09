@@ -27,7 +27,7 @@
 
         const map = new maplibregl.Map({
             container: "map",
-            zoom: 14,
+            zoom: 14.4,
             center: [9.2572, 46.81],
             pitch: 60,
             style: {
@@ -36,10 +36,7 @@
                 sources: {
                     terrain: {
                         type: 'raster-dem',
-                        tiles: ['https://tiles.mapterhorn.com/{z}/{x}/{y}.webp'],
-                        encoding: 'terrarium',
-                        tileSize: 512,
-                        attribution: '<a href="https://mapterhorn.com/attribution">© Mapterhorn</a>'
+                        url: "https://tiles.mapterhorn.com/tilejson.json",
                     },
                     swisstopo: {
                         type: "raster",
