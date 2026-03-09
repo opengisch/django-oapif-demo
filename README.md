@@ -4,8 +4,7 @@
 
 ```bash
 cp .example.env .env
-docker compose --build up -d
-docker compose exec django python manage.py bootstrap
+docker compose up --build -d
 ```
 
 2. Open QGIS
