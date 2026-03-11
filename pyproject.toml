@@ -5,11 +5,11 @@ description = "django-oapif demo project"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "django[argon2]==5.2",
-    "django-oapif @ git+https://github.com/opengisch/django-oapif@files",
-    "psycopg[binary]>=3.3.3",
-    "django-unfold>=0.81.0",
     "django-leaflet>=0.33.0",
+    "django-oapif>=1.1.0",
+    "django-unfold>=0.81.0",
+    "django[argon2]==5.2",
     "gunicorn>=25.1.0",
     "pillow>=12.1.1",
+    "psycopg[binary]>=3.3.3",
 ]
