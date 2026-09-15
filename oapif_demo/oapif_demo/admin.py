@@ -138,7 +138,7 @@ class ReviewAdmin(ModelAdmin):
 
 
 @admin.register(PollenConsumption)
-class PollenConsumption(ModelAdmin):
+class PollenConsumptionAdmin(ModelAdmin):
     fields = (
         "percentage",
         "apiary",
