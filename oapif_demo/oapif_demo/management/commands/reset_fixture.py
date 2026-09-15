@@ -12,7 +12,7 @@ from django.core.management import call_command
 from django.core.management.base import BaseCommand
 from django.db import transaction
 
-FILE_URL = "https://github.com/opengisch/QField/raw/refs/heads/master/resources/sample_projects/datasets/bees.gpkg"
+FILE_URL = "http://qfield.org/sample-projects/bees.zip"
 
 PG_CONN = (
     f"PG:host={os.environ['POSTGRES_HOST']} "
@@ -63,9 +63,8 @@ class Command(BaseCommand):
         tmp_dir = Path(tempfile.TemporaryDirectory().name)
 
         print("Downloading project data...")
-        with urlopen("http://qfield.org/sample-projects/bees.zip") as res:
-            with zipfile.ZipFile(io.BytesIO(res.read())) as z:
-                z.extractall(tmp_dir)
+        with urlopen(FILE_URL) as res, zipfile.ZipFile(io.BytesIO(res.read())) as z:
+            z.extractall(tmp_dir)
 
         for layer in LAYERS:
             cmd = [
