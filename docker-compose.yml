@@ -3,8 +3,6 @@ x-django-service: &django-service
   build:
     context: .
     dockerfile: ./Dockerfile
-    cache_from:
-      - opengisch/django-oapif-demo:latest
   restart: unless-stopped
   depends_on:
     postgres:
