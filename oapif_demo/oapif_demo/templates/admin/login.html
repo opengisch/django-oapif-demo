@@ -12,25 +12,33 @@
       <tr class="bg-white dark:bg-base-900">
         <th class="p-3 text-left border-b border-base-100 dark:border-base-800">Username</th>
         <th class="p-3 text-left border-b border-base-100 dark:border-base-800">Password</th>
+        <th class="p-3 text-left border-b border-base-100 dark:border-base-800"></th>
       </tr>
     </thead>
     <tbody>
-      <tr class="bg-white dark:bg-base-900">
-        <td class="font-normal p-3 text-left border-b border-base-100 dark:border-base-800">
-          readwrite
-        </td>
-        <td class="font-normal p-3 text-left border-b border-base-100 dark:border-base-800">
-          {{ LOGIN_CREDENTIALS.readwrite }}
-        </td>
-      </tr>
-      <tr class="bg-white dark:bg-base-900">
-        <td class="font-normal p-3 text-left">
-          readonly
-        </td>
-        <td class="font-normal p-3 text-left">
-          {{ LOGIN_CREDENTIALS.readonly }}
-        </td>
-      </tr>
+      {% for username, password in LOGIN_CREDENTIALS.items %}
+        <tr class="bg-white dark:bg-base-900">
+          <td class="font-normal p-3 text-left border-b border-base-100 dark:border-base-800">
+            {{ username }}
+          </td>
+          <td class="font-normal p-3 text-left border-b border-base-100 dark:border-base-800">
+            {{ password }}
+          </td>
+          <td class="p-3 text-left border-b border-base-100 dark:border-base-800">
+            <form method="post" action="{% url 'admin:login' %}" class="inline-block">
+              {% csrf_token %}
+              <input type="hidden" name="username" value="{{ username }}">
+              <input type="hidden" name="password" value="{{ password }}">
+              {% if request.GET.next %}
+                <input type="hidden" name="next" value="{{ request.GET.next }}">
+              {% endif %}
+              <button type="submit" aria-label="Log in as {{ username }}" title="Log in as {{ username }}" class="inline-flex cursor-pointer items-center justify-center border-0 bg-transparent p-0 text-base-500 transition-colors hover:text-base-900 focus:outline-none focus:ring-0 dark:text-base-300 dark:hover:text-base-100">
+                <span class="material-symbols-outlined text-base leading-none">login</span>
+              </button>
+            </form>
+          </td>
+        </tr>
+      {% endfor %}
     </tbody>
   </table>
 </div>
